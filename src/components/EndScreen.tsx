@@ -25,6 +25,8 @@ interface Props {
 export default function EndScreen({ results, rounds, totalScore, stats, todayKey, players, mode, difficulty, onPlayOtherModes }: Props) {
   const [countdown, setCountdown] = useState('');
   const shareText = buildShareText(results, todayKey, totalScore, mode, difficulty);
+  const isSurvival = difficulty === 'survival';
+  const survivalStreak = results.filter(r => r.correct).length;
 
   // Countdown to midnight (next puzzle)
   useEffect(() => {
@@ -45,21 +47,34 @@ export default function EndScreen({ results, rounds, totalScore, stats, todayKey
 
   const maxScore = results.length * 1000;
   const pct = maxScore > 0 ? Math.round((totalScore / maxScore) * 100) : 0;
+  const difficultyIcon = difficulty === 'timed' ? '⏱️' : difficulty === 'relaxed' ? '😌' : '❤️';
 
   return (
     <div className="flex flex-col gap-6 w-full animate-scale-in">
       {/* Score hero */}
       <div className="text-center py-6 bg-gray-900 rounded-2xl border border-gray-800">
-        <p className="text-sm text-gray-500 uppercase tracking-widest mb-1">Final Score</p>
-        <p className="text-5xl font-black text-yellow-400">{totalScore.toLocaleString()}</p>
-        <p className="text-gray-500 text-sm mt-1">out of 5,000 · {pct}%</p>
+        {isSurvival ? (
+          <>
+            <p className="text-sm text-gray-500 uppercase tracking-widest mb-1">Survival Streak</p>
+            <p className="text-5xl font-black text-red-400">{survivalStreak}</p>
+            <p className="text-gray-500 text-sm mt-1">
+              {survivalStreak === 0 ? 'Better luck next time!' : `${survivalStreak} in a row`}
+            </p>
+          </>
+        ) : (
+          <>
+            <p className="text-sm text-gray-500 uppercase tracking-widest mb-1">Final Score</p>
+            <p className="text-5xl font-black text-yellow-400">{totalScore.toLocaleString()}</p>
+            <p className="text-gray-500 text-sm mt-1">out of 5,000 · {pct}%</p>
+          </>
+        )}
 
         {/* Mode + difficulty badge */}
         <div className="mt-3 inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-gray-800 border border-gray-700 text-xs text-gray-400">
           <span>{mode === 'modern' ? '🆕' : '📜'}</span>
           <span>{GAME_MODES[mode].label}</span>
           <span className="text-gray-600">·</span>
-          <span>{difficulty === 'timed' ? '⏱️' : '😌'}</span>
+          <span>{difficultyIcon}</span>
           <span>{GAME_DIFFICULTIES[difficulty].label}</span>
         </div>
 
@@ -79,10 +94,10 @@ export default function EndScreen({ results, rounds, totalScore, stats, todayKey
         )}
       </div>
 
-      {/* Round breakdown */}
+      {/* Round breakdown — survival shows all answered rounds, timed/relaxed shows fixed 5 */}
       <div className="bg-gray-900 rounded-2xl border border-gray-800 overflow-hidden">
         <p className="px-4 py-3 text-xs text-gray-500 uppercase tracking-wider font-semibold border-b border-gray-800">
-          Round Breakdown
+          {isSurvival ? 'Answered Rounds' : 'Round Breakdown'}
         </p>
         {results.map((r, i) => {
           const canon = getCanonicalPlayer(rounds[i]?.answerId ?? '', players);
@@ -104,11 +119,19 @@ export default function EndScreen({ results, rounds, totalScore, stats, todayKey
                 </p>
               </div>
               <div className="text-right shrink-0">
-                <p className={`text-sm font-bold ${r.correct ? 'text-yellow-400' : 'text-gray-600'}`}>
-                  {r.correct ? `+${r.points.toLocaleString()}` : '0'} pts
-                </p>
-                {r.correct && (
-                  <p className="text-xs text-gray-500">{(r.timeMs / 1000).toFixed(1)}s</p>
+                {isSurvival ? (
+                  <p className={`text-sm font-bold ${r.correct ? 'text-green-400' : 'text-red-400'}`}>
+                    {r.correct ? '✓' : '✗'}
+                  </p>
+                ) : (
+                  <>
+                    <p className={`text-sm font-bold ${r.correct ? 'text-yellow-400' : 'text-gray-600'}`}>
+                      {r.correct ? `+${r.points.toLocaleString()}` : '0'} pts
+                    </p>
+                    {r.correct && (
+                      <p className="text-xs text-gray-500">{(r.timeMs / 1000).toFixed(1)}s</p>
+                    )}
+                  </>
                 )}
               </div>
             </div>

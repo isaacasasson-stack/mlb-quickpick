@@ -25,8 +25,9 @@ export default function IntroScreen({ onStart, todayKey, playedCombos }: Props) 
         <ul className="text-sm text-gray-400 space-y-2">
           <li className="flex gap-2"><span>🏟️</span><span>You'll see a <strong className="text-white">team</strong>, <strong className="text-white">position</strong>, and <strong className="text-white">season</strong></span></li>
           <li className="flex gap-2"><span>🧠</span><span>Name any MLB player that matches all 3</span></li>
-          <li className="flex gap-2"><span>⏱️</span><span>Timed: 15s clock, faster = more points</span></li>
-          <li className="flex gap-2"><span>😌</span><span>Relaxed: no clock, skip freely, 1,000 pts per correct answer</span></li>
+          <li className="flex gap-2"><span>⏱️</span><span>Timed: 20s clock, faster = more points</span></li>
+          <li className="flex gap-2"><span>😌</span><span>Relaxed: no clock, skip freely, 1,000 pts each</span></li>
+          <li className="flex gap-2"><span>❤️</span><span>Survival: one life — streak til you miss</span></li>
         </ul>
       </div>
 
@@ -64,15 +65,16 @@ export default function IntroScreen({ onStart, todayKey, playedCombos }: Props) 
       {/* Difficulty picker */}
       <div className="w-full max-w-xs flex flex-col gap-3">
         <p className="text-xs font-semibold text-gray-500 text-center uppercase tracking-widest">Difficulty</p>
-        <div className="grid grid-cols-2 gap-3">
+        <div className="grid grid-cols-3 gap-2">
           {(Object.entries(GAME_DIFFICULTIES) as [GameDifficulty, typeof GAME_DIFFICULTIES[GameDifficulty]][]).map(([key, cfg]) => {
             const alreadyPlayed = playedCombos.has(`${selectedMode}-${key}`);
+            const icon = key === 'timed' ? '⏱️' : key === 'relaxed' ? '😌' : '❤️';
             return (
               <button
                 key={key}
                 onClick={() => !alreadyPlayed && setSelectedDifficulty(key)}
                 disabled={alreadyPlayed}
-                className={`relative flex flex-col items-center gap-1 py-4 px-3 rounded-2xl border-2 transition-all duration-150 ${
+                className={`relative flex flex-col items-center gap-1 py-4 px-2 rounded-2xl border-2 transition-all duration-150 ${
                   alreadyPlayed
                     ? 'border-gray-800 bg-gray-900/50 text-gray-600 cursor-not-allowed opacity-60'
                     : selectedDifficulty === key
@@ -83,7 +85,7 @@ export default function IntroScreen({ onStart, todayKey, playedCombos }: Props) 
                 {alreadyPlayed && (
                   <span className="absolute top-2 right-2 text-xs text-green-600 font-bold">✓</span>
                 )}
-                <span className="text-2xl">{key === 'timed' ? '⏱️' : '😌'}</span>
+                <span className="text-2xl">{icon}</span>
                 <span className="font-bold text-sm">{cfg.label}</span>
                 <span className="text-xs opacity-70 text-center leading-tight">{cfg.subtitle}</span>
               </button>
