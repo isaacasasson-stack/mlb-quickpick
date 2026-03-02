@@ -39,15 +39,18 @@ export default function IntroScreen({ onStart, todayKey, playedCombos }: Props) 
             return (
               <button
                 key={key}
-                onClick={() => setSelectedMode(key)}
+                onClick={() => !alreadyPlayed && setSelectedMode(key)}
+                disabled={alreadyPlayed}
                 className={`relative flex flex-col items-center gap-1 py-4 px-3 rounded-2xl border-2 transition-all duration-150 ${
-                  selectedMode === key
+                  alreadyPlayed
+                    ? 'border-gray-800 bg-gray-900/50 text-gray-600 cursor-not-allowed opacity-60'
+                    : selectedMode === key
                     ? 'border-blue-500 bg-blue-600/20 text-white'
                     : 'border-gray-700 bg-gray-900 text-gray-400 hover:border-gray-500'
                 }`}
               >
                 {alreadyPlayed && (
-                  <span className="absolute top-2 right-2 text-xs text-green-400 font-bold">✓</span>
+                  <span className="absolute top-2 right-2 text-xs text-green-600 font-bold">✓</span>
                 )}
                 <span className="text-2xl">{key === 'modern' ? '🆕' : '📜'}</span>
                 <span className="font-bold text-sm">{cfg.label}</span>
@@ -67,15 +70,18 @@ export default function IntroScreen({ onStart, todayKey, playedCombos }: Props) 
             return (
               <button
                 key={key}
-                onClick={() => setSelectedDifficulty(key)}
+                onClick={() => !alreadyPlayed && setSelectedDifficulty(key)}
+                disabled={alreadyPlayed}
                 className={`relative flex flex-col items-center gap-1 py-4 px-3 rounded-2xl border-2 transition-all duration-150 ${
-                  selectedDifficulty === key
+                  alreadyPlayed
+                    ? 'border-gray-800 bg-gray-900/50 text-gray-600 cursor-not-allowed opacity-60'
+                    : selectedDifficulty === key
                     ? 'border-purple-500 bg-purple-600/20 text-white'
                     : 'border-gray-700 bg-gray-900 text-gray-400 hover:border-gray-500'
                 }`}
               >
                 {alreadyPlayed && (
-                  <span className="absolute top-2 right-2 text-xs text-green-400 font-bold">✓</span>
+                  <span className="absolute top-2 right-2 text-xs text-green-600 font-bold">✓</span>
                 )}
                 <span className="text-2xl">{key === 'timed' ? '⏱️' : '😌'}</span>
                 <span className="font-bold text-sm">{cfg.label}</span>
@@ -87,12 +93,16 @@ export default function IntroScreen({ onStart, todayKey, playedCombos }: Props) 
       </div>
 
       <div className="w-full max-w-xs">
-        <button
-          onClick={() => onStart(selectedMode, selectedDifficulty)}
-          className="w-full py-4 bg-blue-600 hover:bg-blue-500 active:scale-95 rounded-xl font-bold text-lg transition-all duration-150"
-        >
-          {playedCombos.has(`${selectedMode}-${selectedDifficulty}`) ? 'Play Again' : 'Play'} — {GAME_MODES[selectedMode].label}
-        </button>
+        {playedCombos.has(`${selectedMode}-${selectedDifficulty}`) ? (
+          <p className="text-center text-sm text-gray-500 py-3">You've already played this combo today</p>
+        ) : (
+          <button
+            onClick={() => onStart(selectedMode, selectedDifficulty)}
+            className="w-full py-4 bg-blue-600 hover:bg-blue-500 active:scale-95 rounded-xl font-bold text-lg transition-all duration-150"
+          >
+            Play — {GAME_MODES[selectedMode].label}
+          </button>
+        )}
       </div>
     </div>
   );
