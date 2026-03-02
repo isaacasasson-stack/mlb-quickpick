@@ -15,7 +15,14 @@ export default function IntroScreen({ onStart, todayKey, playedCombos }: Props) 
   return (
     <div className="flex flex-col items-center justify-center gap-6 py-8 text-center animate-fade-in">
       <div>
-        <div className="text-7xl mb-4">⚾</div>
+        <div className="mx-auto mb-2 overflow-hidden" style={{ width: 140, height: 140 }}>
+          <img
+            src="/logo.png"
+            alt="MLB QuickPick"
+            className="w-full object-cover object-top mix-blend-multiply"
+            style={{ marginTop: '-8%' }}
+          />
+        </div>
         <h2 className="text-3xl font-black mb-2">MLB QuickPick</h2>
         <p className="text-gray-400 text-sm">{todayKey}</p>
       </div>

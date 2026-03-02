@@ -15,7 +15,7 @@ export default function Header({ streak, totalScore, roundIndex, totalRounds, ph
   return (
     <header className="w-full flex items-center justify-between px-4 py-3 border-b border-gray-800">
       <div className="flex items-center gap-2">
-        <span className="text-2xl">⚾</span>
+        <img src="/logo.png" alt="MLB QuickPick" className="h-9 w-9 object-contain mix-blend-multiply" />
         <div>
           <h1 className="text-lg font-bold leading-tight tracking-tight">MLB QuickPick</h1>
           <p className="text-xs text-gray-500 leading-none">Daily Challenge</p>
