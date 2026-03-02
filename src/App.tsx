@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Analytics } from '@vercel/analytics/react';
 import { useGameState } from './hooks/useGameState';
 import { useTimer } from './hooks/useTimer';
 import Header from './components/Header';
@@ -45,90 +46,102 @@ export default function App() {
 
   if (phase === 'loading') {
     return (
-      <div className="min-h-screen flex items-center justify-center">
-        <span className="text-4xl animate-pulse">⚾</span>
-      </div>
+      <>
+        <div className="min-h-screen flex items-center justify-center">
+          <span className="text-4xl animate-pulse">⚾</span>
+        </div>
+        <Analytics />
+      </>
     );
   }
 
   if (phase === 'intro') {
     return (
-      <div className="min-h-screen flex flex-col">
-        <Header streak={stats.streak} totalScore={0} roundIndex={0} totalRounds={5} phase="intro" onHistory={() => setShowHistory(true)} />
-        <main className="flex-1 px-4 py-6 max-w-lg mx-auto w-full">
-          <IntroScreen onStart={handleStart} todayKey={todayKey} playedCombos={playedCombos} />
-        </main>
-        {showHistory && <HistoryScreen stats={stats} onClose={() => setShowHistory(false)} />}
-      </div>
+      <>
+        <div className="min-h-screen flex flex-col">
+          <Header streak={stats.streak} totalScore={0} roundIndex={0} totalRounds={5} phase="intro" onHistory={() => setShowHistory(true)} />
+          <main className="flex-1 px-4 py-6 max-w-lg mx-auto w-full">
+            <IntroScreen onStart={handleStart} todayKey={todayKey} playedCombos={playedCombos} />
+          </main>
+          {showHistory && <HistoryScreen stats={stats} onClose={() => setShowHistory(false)} />}
+        </div>
+        <Analytics />
+      </>
     );
   }
 
   if (phase === 'game_over') {
     return (
-      <div className="min-h-screen flex flex-col">
-        <Header streak={stats.streak} totalScore={totalScore} roundIndex={4} totalRounds={5} phase="game_over" onHistory={() => setShowHistory(true)} />
-        <main className="flex-1 px-4 py-6 max-w-lg mx-auto w-full">
-          <EndScreen
-            results={results}
-            rounds={rounds}
-            totalScore={totalScore}
-            stats={stats}
-            todayKey={todayKey}
-            players={players}
-            mode={mode}
-            difficulty={difficulty}
-            onPlayOtherModes={goToIntro}
-          />
-        </main>
-        {showHistory && <HistoryScreen stats={stats} onClose={() => setShowHistory(false)} />}
-      </div>
+      <>
+        <div className="min-h-screen flex flex-col">
+          <Header streak={stats.streak} totalScore={totalScore} roundIndex={4} totalRounds={5} phase="game_over" onHistory={() => setShowHistory(true)} />
+          <main className="flex-1 px-4 py-6 max-w-lg mx-auto w-full">
+            <EndScreen
+              results={results}
+              rounds={rounds}
+              totalScore={totalScore}
+              stats={stats}
+              todayKey={todayKey}
+              players={players}
+              mode={mode}
+              difficulty={difficulty}
+              onPlayOtherModes={goToIntro}
+            />
+          </main>
+          {showHistory && <HistoryScreen stats={stats} onClose={() => setShowHistory(false)} />}
+        </div>
+        <Analytics />
+      </>
     );
   }
 
   // round_active or round_feedback
   return (
-    <div className="min-h-screen flex flex-col">
-      <Header
-        streak={stats.streak}
-        totalScore={totalScore}
-        roundIndex={currentRoundIndex}
-        totalRounds={rounds.length}
-        phase={phase}
-      />
-
-      <main className="flex-1 px-4 py-6 max-w-lg mx-auto w-full flex flex-col gap-6">
-        {currentRound && (
-          <>
-            {isTimed && (
-              <TimerBar barRef={barRef} remainingSecs={remainingSecs} />
-            )}
-            <ClueCard
-              team={currentRound.clue.team}
-              position={currentRound.clue.position}
-              season={currentRound.clue.season}
-            />
-            <PlayerInput
-              onSubmit={handleSubmit}
-              onSkip={skipRound}
-              disabled={phase !== 'round_active'}
-              players={players}
-              showSkip={!isTimed}
-            />
-          </>
-        )}
-      </main>
-
-      {phase === 'round_feedback' && lastResult && (
-        <FeedbackOverlay
-          result={lastResult}
-          canonicalPlayer={canonicalPlayer ?? null}
-          acceptedPlayers={players.filter(p =>
-            rounds[lastResult.roundIndex]?.acceptedIds.includes(p.id)
-          )}
-          onContinue={advanceRound}
-          isLastRound={currentRoundIndex >= rounds.length - 1}
+    <>
+      <div className="min-h-screen flex flex-col">
+        <Header
+          streak={stats.streak}
+          totalScore={totalScore}
+          roundIndex={currentRoundIndex}
+          totalRounds={rounds.length}
+          phase={phase}
         />
-      )}
-    </div>
+
+        <main className="flex-1 px-4 py-6 max-w-lg mx-auto w-full flex flex-col gap-6">
+          {currentRound && (
+            <>
+              {isTimed && (
+                <TimerBar barRef={barRef} remainingSecs={remainingSecs} />
+              )}
+              <ClueCard
+                team={currentRound.clue.team}
+                position={currentRound.clue.position}
+                season={currentRound.clue.season}
+              />
+              <PlayerInput
+                onSubmit={handleSubmit}
+                onSkip={skipRound}
+                disabled={phase !== 'round_active'}
+                players={players}
+                showSkip={!isTimed}
+              />
+            </>
+          )}
+        </main>
+
+        {phase === 'round_feedback' && lastResult && (
+          <FeedbackOverlay
+            result={lastResult}
+            canonicalPlayer={canonicalPlayer ?? null}
+            acceptedPlayers={players.filter(p =>
+              rounds[lastResult.roundIndex]?.acceptedIds.includes(p.id)
+            )}
+            onContinue={advanceRound}
+            isLastRound={currentRoundIndex >= rounds.length - 1}
+          />
+        )}
+      </div>
+      <Analytics />
+    </>
   );
 }
