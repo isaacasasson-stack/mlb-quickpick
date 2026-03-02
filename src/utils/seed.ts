@@ -1,0 +1,26 @@
+// Use local time (not UTC) so puzzle flips at midnight local time,
+// not UTC midnight (which would be wrong for US West Coast players)
+export function getTodayKey(): string {
+  const d = new Date();
+  const y = d.getFullYear();
+  const m = String(d.getMonth() + 1).padStart(2, '0');
+  const day = String(d.getDate()).padStart(2, '0');
+  return `${y}-${m}-${day}`;
+}
+
+export function dateToSeed(dateStr: string): number {
+  // "2026-03-01" -> 20260301
+  return parseInt(dateStr.replace(/-/g, ''), 10);
+}
+
+// mulberry32: fast, good distribution, deterministic
+export function mulberry32(seed: number): () => number {
+  let s = seed;
+  return function () {
+    s |= 0;
+    s = (s + 0x6d2b79f5) | 0;
+    let t = Math.imul(s ^ (s >>> 15), 1 | s);
+    t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+  };
+}
