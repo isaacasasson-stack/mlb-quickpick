@@ -16,6 +16,7 @@ const DEFAULT_STATS: PlayerStats = {
 
 type Action =
   | { type: 'INIT' }
+  | { type: 'GO_TO_INTRO' }
   | { type: 'START_GAME'; mode: GameMode; difficulty: GameDifficulty; players: MLBPlayer[] }
   | { type: 'SUBMIT_ANSWER'; input: string; elapsedMs: number; players: MLBPlayer[] }
   | { type: 'SKIP_ROUND' }
@@ -39,6 +40,7 @@ function buildInitialState(): GameState {
 function gameReducer(state: GameState, action: Action): GameState {
   switch (action.type) {
     case 'INIT':
+    case 'GO_TO_INTRO':
       return { ...state, phase: 'intro' };
 
     case 'START_GAME': {
@@ -223,6 +225,10 @@ export function useGameState() {
     dispatch({ type: 'ADVANCE_ROUND' });
   }, []);
 
+  const goToIntro = useCallback(() => {
+    dispatch({ type: 'GO_TO_INTRO' });
+  }, []);
+
   const currentRound = state.rounds[state.currentRoundIndex] ?? null;
   const lastResult = state.results[state.results.length - 1] ?? null;
   const canonicalPlayer = lastResult
@@ -247,5 +253,6 @@ export function useGameState() {
     skipRound,
     timerExpired,
     advanceRound,
+    goToIntro,
   };
 }

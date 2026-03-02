@@ -19,9 +19,10 @@ interface Props {
   players: MLBPlayer[];
   mode: GameMode;
   difficulty: GameDifficulty;
+  onPlayOtherModes: () => void;
 }
 
-export default function EndScreen({ results, rounds, totalScore, stats, todayKey, players, mode, difficulty }: Props) {
+export default function EndScreen({ results, rounds, totalScore, stats, todayKey, players, mode, difficulty, onPlayOtherModes }: Props) {
   const [countdown, setCountdown] = useState('');
   const shareText = buildShareText(results, todayKey, totalScore, mode, difficulty);
 
@@ -117,6 +118,14 @@ export default function EndScreen({ results, rounds, totalScore, stats, todayKey
 
       {/* Share */}
       <ShareButton shareText={shareText} />
+
+      {/* Play other modes */}
+      <button
+        onClick={onPlayOtherModes}
+        className="w-full py-3 rounded-xl font-bold text-base border border-gray-700 text-gray-300 hover:border-gray-500 hover:text-white transition-all duration-150 active:scale-95"
+      >
+        Play Other Modes
+      </button>
 
       {/* Next puzzle */}
       <div className="text-center text-sm text-gray-600">

@@ -12,36 +12,39 @@ export function useTimer(active: boolean, onExpire: () => void) {
     onExpireRef.current = onExpire;
   });
 
-  const tick = useCallback(() => {
-    if (!startTimeRef.current) return;
-    const elapsed = Date.now() - startTimeRef.current;
-    if (elapsed >= MAX_TIME_MS) {
-      setElapsedMs(MAX_TIME_MS);
-      onExpireRef.current();
-    } else {
-      setElapsedMs(elapsed);
-      rafRef.current = requestAnimationFrame(tick);
-    }
-  }, []);
-
   useEffect(() => {
-    if (active) {
-      startTimeRef.current = Date.now();
-      setElapsedMs(0);
-      rafRef.current = requestAnimationFrame(tick);
-    } else {
+    if (!active) {
       if (rafRef.current) {
         cancelAnimationFrame(rafRef.current);
         rafRef.current = null;
       }
+      return;
     }
+
+    startTimeRef.current = Date.now();
+    setElapsedMs(0);
+
+    const tick = () => {
+      if (!startTimeRef.current) return;
+      const elapsed = Date.now() - startTimeRef.current;
+      if (elapsed >= MAX_TIME_MS) {
+        setElapsedMs(MAX_TIME_MS);
+        onExpireRef.current();
+      } else {
+        setElapsedMs(elapsed);
+        rafRef.current = requestAnimationFrame(tick);
+      }
+    };
+
+    rafRef.current = requestAnimationFrame(tick);
+
     return () => {
       if (rafRef.current) {
         cancelAnimationFrame(rafRef.current);
         rafRef.current = null;
       }
     };
-  }, [active, tick]);
+  }, [active]);
 
   // Read the true elapsed time at the moment of submission (not stale state)
   const getElapsed = useCallback((): number => {

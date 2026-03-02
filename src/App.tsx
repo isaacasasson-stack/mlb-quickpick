@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { useGameState } from './hooks/useGameState';
 import { useTimer } from './hooks/useTimer';
 import Header from './components/Header';
@@ -7,6 +8,7 @@ import PlayerInput from './components/PlayerInput';
 import FeedbackOverlay from './components/FeedbackOverlay';
 import EndScreen from './components/EndScreen';
 import IntroScreen from './components/IntroScreen';
+import HistoryScreen from './components/HistoryScreen';
 import type { MLBPlayer, GameMode, GameDifficulty } from './types';
 
 export default function App() {
@@ -23,7 +25,10 @@ export default function App() {
     skipRound,
     timerExpired,
     advanceRound,
+    goToIntro,
   } = useGameState();
+
+  const [showHistory, setShowHistory] = useState(false);
 
   const isTimed = state.difficulty === 'timed';
   const timerActive = state.phase === 'round_active' && isTimed;
@@ -49,10 +54,11 @@ export default function App() {
   if (phase === 'intro') {
     return (
       <div className="min-h-screen flex flex-col">
-        <Header streak={stats.streak} totalScore={0} roundIndex={0} totalRounds={5} phase="intro" />
+        <Header streak={stats.streak} totalScore={0} roundIndex={0} totalRounds={5} phase="intro" onHistory={() => setShowHistory(true)} />
         <main className="flex-1 px-4 py-6 max-w-lg mx-auto w-full">
           <IntroScreen onStart={handleStart} todayKey={todayKey} playedCombos={playedCombos} />
         </main>
+        {showHistory && <HistoryScreen stats={stats} onClose={() => setShowHistory(false)} />}
       </div>
     );
   }
@@ -60,7 +66,7 @@ export default function App() {
   if (phase === 'game_over') {
     return (
       <div className="min-h-screen flex flex-col">
-        <Header streak={stats.streak} totalScore={totalScore} roundIndex={4} totalRounds={5} phase="game_over" />
+        <Header streak={stats.streak} totalScore={totalScore} roundIndex={4} totalRounds={5} phase="game_over" onHistory={() => setShowHistory(true)} />
         <main className="flex-1 px-4 py-6 max-w-lg mx-auto w-full">
           <EndScreen
             results={results}
@@ -71,8 +77,10 @@ export default function App() {
             players={players}
             mode={mode}
             difficulty={difficulty}
+            onPlayOtherModes={goToIntro}
           />
         </main>
+        {showHistory && <HistoryScreen stats={stats} onClose={() => setShowHistory(false)} />}
       </div>
     );
   }
