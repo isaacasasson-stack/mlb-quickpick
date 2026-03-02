@@ -46,7 +46,8 @@ export default function PlayerInput({ onSubmit, onSkip, disabled, players, showS
       e.preventDefault();
       if (suggestions.length > 0 && isOpen) {
         handleSelect(suggestions[highlightIndex]);
-      } else if (selectedPlayer) {
+      } else if (selectedPlayer && showSkip) {
+        // In relaxed mode, Enter on a locked-in selection submits it
         onSubmit(selectedPlayer);
       }
     } else if (e.key === 'Escape') {
@@ -58,7 +59,12 @@ export default function PlayerInput({ onSubmit, onSkip, disabled, players, showS
     selectPlayer(player);
     setIsOpen(false);
     setHighlightIndex(0);
-    setTimeout(() => inputRef.current?.focus(), 0);
+    // In timed mode, selecting from dropdown auto-submits immediately
+    if (!showSkip) {
+      onSubmit(player);
+    } else {
+      setTimeout(() => inputRef.current?.focus(), 0);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
