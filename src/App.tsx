@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 import { useGameState } from './hooks/useGameState';
 import { useTimer } from './hooks/useTimer';
 import Header from './components/Header';
@@ -47,6 +48,7 @@ export default function App() {
     return (
       <div className="min-h-screen flex items-center justify-center">
         <span className="text-4xl animate-pulse">⚾</span>
+        <SpeedInsights />
       </div>
     );
   }
@@ -59,6 +61,7 @@ export default function App() {
           <IntroScreen onStart={handleStart} todayKey={todayKey} playedCombos={playedCombos} />
         </main>
         {showHistory && <HistoryScreen stats={stats} onClose={() => setShowHistory(false)} />}
+        <SpeedInsights />
       </div>
     );
   }
@@ -81,6 +84,7 @@ export default function App() {
           />
         </main>
         {showHistory && <HistoryScreen stats={stats} onClose={() => setShowHistory(false)} />}
+        <SpeedInsights />
       </div>
     );
   }
@@ -129,6 +133,7 @@ export default function App() {
           isLastRound={currentRoundIndex >= rounds.length - 1}
         />
       )}
+      <SpeedInsights />
     </div>
   );
 }
