@@ -127,6 +127,16 @@ export default function EndScreen({ results, rounds, totalScore, stats, todayKey
         Play Other Modes
       </button>
 
+      {/* Tip jar */}
+      <a
+        href="https://buymeacoffee.com/mlbquickpick"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="w-full py-3 rounded-xl font-bold text-base flex items-center justify-center gap-2 bg-yellow-500 hover:bg-yellow-400 active:scale-95 text-gray-900 transition-all duration-150"
+      >
+        <span>☕</span> Buy Me a Coffee
+      </a>
+
       {/* Next puzzle */}
       <div className="text-center text-sm text-gray-600">
         <p>Next puzzle in</p>

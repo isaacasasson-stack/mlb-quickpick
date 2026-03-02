@@ -41,6 +41,17 @@ export default function Header({ streak, totalScore, roundIndex, totalRounds, ph
             {totalScore.toLocaleString()} pts
           </div>
         )}
+        {showHistory && (
+          <a
+            href="https://buymeacoffee.com/mlbquickpick"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-400 hover:text-yellow-400 transition-colors p-1 text-lg leading-none"
+            aria-label="Buy me a coffee"
+          >
+            ☕
+          </a>
+        )}
         {showHistory && onHistory && (
           <button
             onClick={onHistory}
