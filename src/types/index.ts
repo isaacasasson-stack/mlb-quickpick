@@ -37,7 +37,7 @@ export interface RoundResult {
 export type GameMode = 'modern' | 'alltime';
 
 export const GAME_MODES: Record<GameMode, { label: string; subtitle: string; minYear: number; maxYear: number; seedOffset: number }> = {
-  modern:  { label: 'Modern Era',  subtitle: '2000 – 2025', minYear: 2000, maxYear: 2025, seedOffset: 0 },
+  modern:  { label: 'Modern Era',  subtitle: '2010 – 2025', minYear: 2010, maxYear: 2025, seedOffset: 0 },
   alltime: { label: 'All Time',    subtitle: '1980 – 2025', minYear: 1980, maxYear: 2025, seedOffset: 999983 },
 };
 
