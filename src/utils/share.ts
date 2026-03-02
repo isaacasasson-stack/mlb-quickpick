@@ -27,7 +27,7 @@ export function buildShareText(
     `${modeLabel} · ${diffLabel}`,
     `${grid} ${correctCount}/5`,
     `Score: ${totalScore.toLocaleString()}/5,000`,
-    `Play at: mlbquickpick.vercel.app`,
+    `Play at: mlb-quickpick.vercel.app`,
   ].join('\n');
 }
 
