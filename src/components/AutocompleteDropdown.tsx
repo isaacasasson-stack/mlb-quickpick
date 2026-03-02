@@ -29,9 +29,6 @@ export default function AutocompleteDropdown({ suggestions, onSelect, highlightI
           }}
         >
           <span className="font-medium">{player.name}</span>
-          <span className={`text-xs font-mono ${i === highlightIndex ? 'text-blue-200' : 'text-gray-500'}`}>
-            {player.positions.join('/')} · {player.teams[0]}
-          </span>
         </li>
       ))}
     </ul>

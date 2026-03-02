@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { shareResults } from '../utils/share';
 
 interface Props {
   shareText: string;
@@ -14,12 +13,13 @@ export default function ShareButton({ shareText }: Props) {
     if (state === 'copying') return;
     setState('copying');
     try {
-      const result = await shareResults(shareText);
-      if (result === 'clipboard') {
-        setState('copied');
-        setTimeout(() => setState('idle'), 2500);
-      } else {
-        setState('idle');
+      // Always copy to clipboard first so the text is ready to paste
+      await navigator.clipboard.writeText(shareText);
+      setState('copied');
+      setTimeout(() => setState('idle'), 2500);
+      // Also open native share sheet on mobile if available
+      if (navigator.share) {
+        navigator.share({ title: 'MLB QuickPick', text: shareText }).catch(() => {});
       }
     } catch {
       setState('error');
@@ -28,10 +28,10 @@ export default function ShareButton({ shareText }: Props) {
   };
 
   const label =
-    state === 'copying' ? 'Sharing...' :
+    state === 'copying' ? 'Copying...' :
     state === 'copied'  ? '✓ Copied to clipboard!' :
     state === 'error'   ? 'Error — try again' :
-    '📤 Share Results';
+    '📋 Copy & Share Results';
 
   return (
     <button

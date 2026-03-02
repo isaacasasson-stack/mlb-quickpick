@@ -1,10 +1,14 @@
 // ─── Raw dataset shape ────────────────────────────────────────────────
+export interface PlayerSeason {
+  year: number;         // 2011
+  team: string;         // "MIN"
+  positions: string[];  // ["RF", "LF"] — only positions with >= 5 games that season
+}
+
 export interface MLBPlayer {
   id: string;           // kebab-case slug: "mike-trout"
   name: string;         // "Mike Trout"
-  teams: string[];      // ["LAA"] or ["NYY", "BOS"]
-  positions: string[];  // ["OF"] or ["1B", "OF"]
-  seasons: number[];    // each year they appeared
+  seasons: PlayerSeason[];
 }
 
 // ─── A single generated puzzle round ──────────────────────────────────
@@ -33,8 +37,8 @@ export interface RoundResult {
 export type GameMode = 'modern' | 'alltime';
 
 export const GAME_MODES: Record<GameMode, { label: string; subtitle: string; minYear: number; maxYear: number; seedOffset: number }> = {
-  modern:  { label: 'Modern Era',  subtitle: '2000 – 2022', minYear: 2000, maxYear: 2022, seedOffset: 0 },
-  alltime: { label: 'All Time',    subtitle: '1980 – 2022', minYear: 1980, maxYear: 2022, seedOffset: 999983 },
+  modern:  { label: 'Modern Era',  subtitle: '2000 – 2025', minYear: 2000, maxYear: 2025, seedOffset: 0 },
+  alltime: { label: 'All Time',    subtitle: '1980 – 2025', minYear: 1980, maxYear: 2025, seedOffset: 999983 },
 };
 
 // ─── Game difficulty ──────────────────────────────────────────────────

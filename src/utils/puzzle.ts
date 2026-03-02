@@ -4,11 +4,20 @@ import { mulberry32, dateToSeed } from './seed';
 
 const ROUNDS_PER_DAY = 5;
 
+/** A player matches a clue only if the SAME season record has all three: year, team, position */
+function playerMatchesClue(player: MLBPlayer, team: string, position: string, year: number): boolean {
+  return player.seasons.some(
+    s => s.year === year && s.team === team && s.positions.includes(position)
+  );
+}
+
 export function generateDailyPuzzle(dateKey: string, allPlayers: MLBPlayer[], mode: GameMode): PuzzleRound[] {
   const { minYear, maxYear, seedOffset } = GAME_MODES[mode];
 
   // Filter to players who have at least one season in the mode's year range
-  const pool = allPlayers.filter(p => p.seasons.some(s => s >= minYear && s <= maxYear));
+  const pool = allPlayers.filter(p =>
+    p.seasons.some(s => s.year >= minYear && s.year <= maxYear)
+  );
 
   const seed = dateToSeed(dateKey) + seedOffset;
   const rng = mulberry32(seed);
@@ -22,23 +31,21 @@ export function generateDailyPuzzle(dateKey: string, allPlayers: MLBPlayer[], mo
     const player = shuffled[i];
 
     // Only pick from seasons within the mode range
-    const validSeasons = player.seasons.filter(s => s >= minYear && s <= maxYear);
-    const season = validSeasons[Math.floor(rng() * validSeasons.length)];
-    const team = player.teams[Math.floor(rng() * player.teams.length)];
-    const position = player.positions[Math.floor(rng() * player.positions.length)];
+    const validSeasons = player.seasons.filter(s => s.year >= minYear && s.year <= maxYear);
+    const seasonRecord = validSeasons[Math.floor(rng() * validSeasons.length)];
 
-    // All players in the pool that match ALL 3 criteria are valid answers
+    const year = seasonRecord.year;
+    const team = seasonRecord.team;
+    const position = seasonRecord.positions[Math.floor(rng() * seasonRecord.positions.length)];
+
+    // All players matching ALL 3 clues against the same season record
     const acceptedIds = pool
-      .filter(p =>
-        p.teams.includes(team) &&
-        p.positions.includes(position) &&
-        p.seasons.includes(season)
-      )
+      .filter(p => playerMatchesClue(p, team, position, year))
       .map(p => p.id);
 
     rounds.push({
       roundIndex: i,
-      clue: { team, position, season },
+      clue: { team, position, season: year },
       answerId: player.id,
       acceptedIds,
     });
