@@ -19,7 +19,7 @@ export default function IntroScreen({ onStart, todayKey, playedCombos }: Props) 
           <img
             src="/logo.png"
             alt="MLB QuickPick"
-            className="w-full object-cover object-top mix-blend-multiply"
+            className="w-full object-cover object-top"
             style={{ marginTop: '-8%' }}
           />
         </div>
