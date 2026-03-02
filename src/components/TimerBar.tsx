@@ -1,17 +1,12 @@
+import type { RefObject } from 'react';
+
 interface Props {
-  remainingPct: number;   // 0.0 to 1.0
+  barRef: RefObject<HTMLDivElement | null>;
   remainingSecs: number;
 }
 
-export default function TimerBar({ remainingPct, remainingSecs }: Props) {
-  const isUrgent = remainingPct < 0.33;
-  const isMid = remainingPct >= 0.33 && remainingPct < 0.66;
-
-  const barColor = isUrgent
-    ? 'bg-red-500'
-    : isMid
-    ? 'bg-yellow-400'
-    : 'bg-green-500';
+export default function TimerBar({ barRef, remainingSecs }: Props) {
+  const isUrgent = remainingSecs <= 5;
 
   return (
     <div className="w-full">
@@ -27,8 +22,12 @@ export default function TimerBar({ remainingPct, remainingSecs }: Props) {
       </div>
       <div className="w-full h-3 bg-gray-800 rounded-full overflow-hidden">
         <div
-          className={`h-full rounded-full transition-[width] duration-100 ease-linear ${barColor}`}
-          style={{ width: `${remainingPct * 100}%` }}
+          ref={barRef}
+          className="h-full w-full origin-left"
+          style={{
+            backgroundColor: 'rgb(34 197 94)',
+            transform: 'scaleX(1)',
+          }}
         />
       </div>
     </div>

@@ -32,7 +32,7 @@ export default function App() {
 
   const isTimed = state.difficulty === 'timed';
   const timerActive = state.phase === 'round_active' && isTimed;
-  const { remainingPct, remainingSecs, getElapsed } = useTimer(timerActive, timerExpired);
+  const { remainingSecs, barRef, getElapsed } = useTimer(timerActive, timerExpired);
 
   const handleSubmit = (player: MLBPlayer) => {
     const elapsed = isTimed ? getElapsed() : 0;
@@ -100,7 +100,7 @@ export default function App() {
         {currentRound && (
           <>
             {isTimed && (
-              <TimerBar remainingPct={remainingPct} remainingSecs={remainingSecs} />
+              <TimerBar barRef={barRef} remainingSecs={remainingSecs} />
             )}
             <ClueCard
               team={currentRound.clue.team}
