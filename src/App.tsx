@@ -7,7 +7,6 @@ import PlayerInput from './components/PlayerInput';
 import FeedbackOverlay from './components/FeedbackOverlay';
 import EndScreen from './components/EndScreen';
 import IntroScreen from './components/IntroScreen';
-import AlreadyPlayedScreen from './components/AlreadyPlayedScreen';
 import type { MLBPlayer, GameMode, GameDifficulty } from './types';
 
 export default function App() {
@@ -18,7 +17,7 @@ export default function App() {
     currentRound,
     lastResult,
     canonicalPlayer,
-    alreadyPlayedToday,
+    playedCombos,
     startGame,
     submitAnswer,
     skipRound,
@@ -47,30 +46,12 @@ export default function App() {
     );
   }
 
-  // Already played today — show summary
-  if (alreadyPlayedToday && phase === 'intro') {
-    return (
-      <div className="min-h-screen flex flex-col">
-        <Header
-          streak={stats.streak}
-          totalScore={stats.history[todayKey]?.totalScore ?? 0}
-          roundIndex={0}
-          totalRounds={5}
-          phase="game_over"
-        />
-        <main className="flex-1 px-4 py-6 max-w-lg mx-auto w-full">
-          <AlreadyPlayedScreen stats={stats} todayKey={todayKey} rounds={rounds} />
-        </main>
-      </div>
-    );
-  }
-
   if (phase === 'intro') {
     return (
       <div className="min-h-screen flex flex-col">
         <Header streak={stats.streak} totalScore={0} roundIndex={0} totalRounds={5} phase="intro" />
         <main className="flex-1 px-4 py-6 max-w-lg mx-auto w-full">
-          <IntroScreen onStart={handleStart} todayKey={todayKey} />
+          <IntroScreen onStart={handleStart} todayKey={todayKey} playedCombos={playedCombos} />
         </main>
       </div>
     );

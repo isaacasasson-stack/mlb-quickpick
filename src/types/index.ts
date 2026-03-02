@@ -71,9 +71,14 @@ export interface GameState {
 }
 
 // ─── localStorage persistence ─────────────────────────────────────────
-export interface DayRecord {
+export interface ComboRecord {
   totalScore: number;
   results: Pick<RoundResult, 'correct' | 'timeMs' | 'points'>[];
+}
+
+export interface DayRecord {
+  // Keyed by "mode-difficulty" e.g. "modern-timed", "alltime-relaxed"
+  combos: Record<string, ComboRecord>;
 }
 
 export interface PlayerStats {

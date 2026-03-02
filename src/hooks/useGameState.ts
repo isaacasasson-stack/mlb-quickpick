@@ -4,7 +4,7 @@ import { calculatePoints } from '../utils/scoring';
 import { resolveAnswer } from '../utils/validation';
 import { getTodayKey } from '../utils/seed';
 import { useLocalStorage } from './useLocalStorage';
-import type { GameState, RoundResult, PlayerStats, DayRecord, MLBPlayer, GameMode, GameDifficulty } from '../types';
+import type { GameState, RoundResult, PlayerStats, DayRecord, ComboRecord, MLBPlayer, GameMode, GameDifficulty } from '../types';
 
 const DEFAULT_STATS: PlayerStats = {
   lastPlayed: '',
@@ -156,6 +156,7 @@ export function useGameState() {
 
     setStats(prev => {
       const today = state.todayKey;
+      const comboKey = `${state.mode}-${state.difficulty}`;
       const yesterday = (() => {
         const d = new Date(today + 'T12:00:00');
         d.setDate(d.getDate() - 1);
@@ -165,13 +166,22 @@ export function useGameState() {
       const newStreak =
         prev.lastPlayed === yesterday ? prev.streak + 1 : 1;
 
-      const dayRecord: DayRecord = {
+      const comboRecord: ComboRecord = {
         totalScore: state.totalScore,
         results: state.results.map(r => ({
           correct: r.correct,
           timeMs: r.timeMs,
           points: r.points,
         })),
+      };
+
+      // Merge into existing day record (preserve other combos played today)
+      const existingDay = prev.history[today];
+      const dayRecord: DayRecord = {
+        combos: {
+          ...(existingDay?.combos ?? {}),
+          [comboKey]: comboRecord,
+        },
       };
 
       // Prune history to last 30 days
@@ -219,7 +229,10 @@ export function useGameState() {
     ? getCanonicalPlayer(state.rounds[lastResult.roundIndex]?.answerId ?? '', players)
     : null;
 
-  const alreadyPlayedToday = stats.lastPlayed === state.todayKey;
+  // Set of "mode-difficulty" combos played today e.g. {"modern-timed", "alltime-relaxed"}
+  const playedCombos = new Set<string>(
+    Object.keys(stats.history[state.todayKey]?.combos ?? {})
+  );
 
   return {
     state,
@@ -228,7 +241,7 @@ export function useGameState() {
     currentRound,
     lastResult,
     canonicalPlayer,
-    alreadyPlayedToday,
+    playedCombos,
     startGame,
     submitAnswer,
     skipRound,

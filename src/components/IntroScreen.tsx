@@ -5,9 +5,10 @@ import { GAME_MODES, GAME_DIFFICULTIES } from '../types';
 interface Props {
   onStart: (mode: GameMode, difficulty: GameDifficulty) => void;
   todayKey: string;
+  playedCombos: Set<string>;
 }
 
-export default function IntroScreen({ onStart, todayKey }: Props) {
+export default function IntroScreen({ onStart, todayKey, playedCombos }: Props) {
   const [selectedMode, setSelectedMode] = useState<GameMode>('modern');
   const [selectedDifficulty, setSelectedDifficulty] = useState<GameDifficulty>('timed');
 
@@ -33,21 +34,27 @@ export default function IntroScreen({ onStart, todayKey }: Props) {
       <div className="w-full max-w-xs flex flex-col gap-3">
         <p className="text-xs font-semibold text-gray-500 text-center uppercase tracking-widest">Era</p>
         <div className="grid grid-cols-2 gap-3">
-          {(Object.entries(GAME_MODES) as [GameMode, typeof GAME_MODES[GameMode]][]).map(([key, cfg]) => (
-            <button
-              key={key}
-              onClick={() => setSelectedMode(key)}
-              className={`flex flex-col items-center gap-1 py-4 px-3 rounded-2xl border-2 transition-all duration-150 ${
-                selectedMode === key
-                  ? 'border-blue-500 bg-blue-600/20 text-white'
-                  : 'border-gray-700 bg-gray-900 text-gray-400 hover:border-gray-500'
-              }`}
-            >
-              <span className="text-2xl">{key === 'modern' ? '🆕' : '📜'}</span>
-              <span className="font-bold text-sm">{cfg.label}</span>
-              <span className="text-xs opacity-70">{cfg.subtitle}</span>
-            </button>
-          ))}
+          {(Object.entries(GAME_MODES) as [GameMode, typeof GAME_MODES[GameMode]][]).map(([key, cfg]) => {
+            const alreadyPlayed = playedCombos.has(`${key}-${selectedDifficulty}`);
+            return (
+              <button
+                key={key}
+                onClick={() => setSelectedMode(key)}
+                className={`relative flex flex-col items-center gap-1 py-4 px-3 rounded-2xl border-2 transition-all duration-150 ${
+                  selectedMode === key
+                    ? 'border-blue-500 bg-blue-600/20 text-white'
+                    : 'border-gray-700 bg-gray-900 text-gray-400 hover:border-gray-500'
+                }`}
+              >
+                {alreadyPlayed && (
+                  <span className="absolute top-2 right-2 text-xs text-green-400 font-bold">✓</span>
+                )}
+                <span className="text-2xl">{key === 'modern' ? '🆕' : '📜'}</span>
+                <span className="font-bold text-sm">{cfg.label}</span>
+                <span className="text-xs opacity-70">{cfg.subtitle}</span>
+              </button>
+            );
+          })}
         </div>
       </div>
 
@@ -55,21 +62,27 @@ export default function IntroScreen({ onStart, todayKey }: Props) {
       <div className="w-full max-w-xs flex flex-col gap-3">
         <p className="text-xs font-semibold text-gray-500 text-center uppercase tracking-widest">Difficulty</p>
         <div className="grid grid-cols-2 gap-3">
-          {(Object.entries(GAME_DIFFICULTIES) as [GameDifficulty, typeof GAME_DIFFICULTIES[GameDifficulty]][]).map(([key, cfg]) => (
-            <button
-              key={key}
-              onClick={() => setSelectedDifficulty(key)}
-              className={`flex flex-col items-center gap-1 py-4 px-3 rounded-2xl border-2 transition-all duration-150 ${
-                selectedDifficulty === key
-                  ? 'border-purple-500 bg-purple-600/20 text-white'
-                  : 'border-gray-700 bg-gray-900 text-gray-400 hover:border-gray-500'
-              }`}
-            >
-              <span className="text-2xl">{key === 'timed' ? '⏱️' : '😌'}</span>
-              <span className="font-bold text-sm">{cfg.label}</span>
-              <span className="text-xs opacity-70 text-center leading-tight">{cfg.subtitle}</span>
-            </button>
-          ))}
+          {(Object.entries(GAME_DIFFICULTIES) as [GameDifficulty, typeof GAME_DIFFICULTIES[GameDifficulty]][]).map(([key, cfg]) => {
+            const alreadyPlayed = playedCombos.has(`${selectedMode}-${key}`);
+            return (
+              <button
+                key={key}
+                onClick={() => setSelectedDifficulty(key)}
+                className={`relative flex flex-col items-center gap-1 py-4 px-3 rounded-2xl border-2 transition-all duration-150 ${
+                  selectedDifficulty === key
+                    ? 'border-purple-500 bg-purple-600/20 text-white'
+                    : 'border-gray-700 bg-gray-900 text-gray-400 hover:border-gray-500'
+                }`}
+              >
+                {alreadyPlayed && (
+                  <span className="absolute top-2 right-2 text-xs text-green-400 font-bold">✓</span>
+                )}
+                <span className="text-2xl">{key === 'timed' ? '⏱️' : '😌'}</span>
+                <span className="font-bold text-sm">{cfg.label}</span>
+                <span className="text-xs opacity-70 text-center leading-tight">{cfg.subtitle}</span>
+              </button>
+            );
+          })}
         </div>
       </div>
 
@@ -78,7 +91,7 @@ export default function IntroScreen({ onStart, todayKey }: Props) {
           onClick={() => onStart(selectedMode, selectedDifficulty)}
           className="w-full py-4 bg-blue-600 hover:bg-blue-500 active:scale-95 rounded-xl font-bold text-lg transition-all duration-150"
         >
-          Play — {GAME_MODES[selectedMode].label}
+          {playedCombos.has(`${selectedMode}-${selectedDifficulty}`) ? 'Play Again' : 'Play'} — {GAME_MODES[selectedMode].label}
         </button>
       </div>
     </div>
