@@ -66,9 +66,15 @@ export function generateSurvivalRound(dateKey: string, allPlayers: MLBPlayer[], 
   const rng = mulberry32(seed);
 
   const shuffled = [...pool].sort(() => rng() - 0.5);
-  const player = shuffled[0];
 
-  const validSeasons = player.seasons.filter(s => s.year >= minYear && s.year <= maxYear);
+  // Skip players whose in-range seasons all have empty team/position data
+  const player = shuffled.find(p =>
+    p.seasons.some(s => s.year >= minYear && s.year <= maxYear && s.team && s.positions.length > 0)
+  ) ?? shuffled[0];
+
+  const validSeasons = player.seasons.filter(s =>
+    s.year >= minYear && s.year <= maxYear && s.team && s.positions.length > 0
+  );
   const seasonRecord = validSeasons[Math.floor(rng() * validSeasons.length)];
 
   const year = seasonRecord.year;

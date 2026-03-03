@@ -11,7 +11,7 @@ export default function AutocompleteDropdown({ suggestions, onSelect, highlightI
 
   return (
     <ul
-      className="absolute top-full left-0 right-0 mt-1 bg-gray-800 border border-gray-700 rounded-xl overflow-hidden z-50 shadow-xl animate-fade-in"
+      className="absolute top-full left-0 right-0 mt-1 bg-gray-800 border border-gray-700 rounded-xl overflow-y-auto z-50 shadow-xl animate-fade-in max-h-60"
       role="listbox"
     >
       {suggestions.map((player, i) => {
@@ -32,8 +32,8 @@ export default function AutocompleteDropdown({ suggestions, onSelect, highlightI
               e.preventDefault();
               onSelect(player);
             }}
-            onTouchStart={(e) => {
-              // Prevent scroll/blur race on mobile
+            onTouchEnd={(e) => {
+              // Use touchend so scroll gestures don't accidentally select
               e.preventDefault();
               onSelect(player);
             }}

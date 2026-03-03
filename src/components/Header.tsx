@@ -5,22 +5,28 @@ interface Props {
   totalRounds: number;
   phase: string;
   onHistory?: () => void;
+  onHome?: () => void;
 }
 
-export default function Header({ streak, totalScore, roundIndex, totalRounds, phase, onHistory }: Props) {
+export default function Header({ streak, totalScore, roundIndex, totalRounds, phase, onHistory, onHome }: Props) {
   const showScore = phase === 'round_active' || phase === 'round_feedback';
   const showRound = phase === 'round_active' || phase === 'round_feedback';
   const showHistory = phase === 'intro' || phase === 'game_over';
 
   return (
     <header className="w-full flex items-center justify-between px-4 py-3 border-b border-gray-800">
-      <div className="flex items-center gap-2">
+      <button
+        onClick={onHome}
+        disabled={!onHome}
+        className="flex items-center gap-2 disabled:cursor-default"
+        aria-label="Go to home"
+      >
         <img src="/logo.png" alt="MLB QuickPick" className="h-9 w-9 object-contain" />
         <div>
           <h1 className="text-lg font-bold leading-tight tracking-tight">MLB QuickPick</h1>
           <p className="text-xs text-gray-500 leading-none">Daily Challenge</p>
         </div>
-      </div>
+      </button>
 
       <div className="flex items-center gap-3">
         {streak > 0 && (

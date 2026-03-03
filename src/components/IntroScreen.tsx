@@ -64,7 +64,7 @@ export default function IntroScreen({ onStart, todayKey, playedCombos }: Props) 
 
       {/* Difficulty picker */}
       <div className="w-full max-w-xs flex flex-col gap-3">
-        <p className="text-xs font-semibold text-gray-500 text-center uppercase tracking-widest">Difficulty</p>
+        <p className="text-xs font-semibold text-gray-500 text-center uppercase tracking-widest">Mode</p>
         <div className="grid grid-cols-3 gap-2">
           {(Object.entries(GAME_DIFFICULTIES) as [GameDifficulty, typeof GAME_DIFFICULTIES[GameDifficulty]][]).map(([key, cfg]) => {
             const alreadyPlayed = playedCombos.has(`${selectedMode}-${key}`);

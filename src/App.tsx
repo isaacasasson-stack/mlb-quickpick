@@ -67,7 +67,7 @@ export default function App() {
   if (phase === 'game_over') {
     return (
       <div className="min-h-screen flex flex-col">
-        <Header streak={stats.streak} totalScore={totalScore} roundIndex={4} totalRounds={5} phase="game_over" onHistory={() => setShowHistory(true)} />
+        <Header streak={stats.streak} totalScore={totalScore} roundIndex={4} totalRounds={5} phase="game_over" onHistory={() => setShowHistory(true)} onHome={goToIntro} />
         <main className="flex-1 px-4 py-6 max-w-lg mx-auto w-full">
           <EndScreen
             results={results}
@@ -95,6 +95,7 @@ export default function App() {
         roundIndex={currentRoundIndex}
         totalRounds={rounds.length}
         phase={phase}
+        onHome={goToIntro}
       />
 
       <main className="flex-1 px-4 py-6 max-w-lg mx-auto w-full flex flex-col gap-6">
