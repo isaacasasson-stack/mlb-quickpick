@@ -103,17 +103,17 @@ export default function App() {
             {isTimed && (
               <TimerBar barRef={barRef} remainingSecs={remainingSecs} />
             )}
-            <ClueCard
-              team={currentRound.clue.team}
-              position={currentRound.clue.position}
-              season={currentRound.clue.season}
-            />
             <PlayerInput
               onSubmit={handleSubmit}
               onSkip={skipRound}
               disabled={phase !== 'round_active'}
               players={players}
               showSkip={!isTimed && !isSurvival}
+            />
+            <ClueCard
+              team={currentRound.clue.team}
+              position={currentRound.clue.position}
+              season={currentRound.clue.season}
             />
           </>
         )}
