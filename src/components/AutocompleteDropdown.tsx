@@ -32,6 +32,11 @@ export default function AutocompleteDropdown({ suggestions, onSelect, highlightI
               e.preventDefault();
               onSelect(player);
             }}
+            onTouchStart={(e) => {
+              // Prevent scroll/blur race on mobile
+              e.preventDefault();
+              onSelect(player);
+            }}
           >
             <span className="font-medium">{player.name}</span>
             <span className={`text-xs tabular-nums ${i === highlightIndex ? 'text-blue-200' : 'text-gray-500'}`}>{yearRange}</span>

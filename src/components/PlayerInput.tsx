@@ -89,8 +89,8 @@ export default function PlayerInput({ onSubmit, onSkip, disabled, players, showS
           value={query}
           onChange={handleChange}
           onKeyDown={handleKeyDown}
-          onFocus={() => setIsOpen(true)}
-          onBlur={() => setTimeout(() => setIsOpen(false), 150)}
+          onFocus={() => { if (query.length >= 2) setIsOpen(true); }}
+          onBlur={() => setTimeout(() => setIsOpen(false), 300)}
           placeholder="Type a player name..."
           disabled={disabled}
           autoComplete="off"

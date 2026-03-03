@@ -1,9 +1,15 @@
 import type { MLBPlayer } from '../types';
 
-export function normalize(s: string): string {
-  // Strip punctuation (periods, hyphens, apostrophes, etc.) then collapse/remove spaces
-  // so "C. J. Wilson", "CJ Wilson", and "C.J. Wilson" all match each other
-  return s.toLowerCase().replace(/[^a-z0-9 ]/g, '').replace(/\s+/g, '').trim();
+// For search/autocomplete: strip punctuation, collapse spaces, lowercase
+// "C. J. Wilson" → "c j wilson", "Mike Trout" → "mike trout"
+function normalizeSearch(s: string): string {
+  return s.toLowerCase().replace(/[^a-z0-9 ]/g, ' ').replace(/\s+/g, ' ').trim();
+}
+
+// For exact answer matching: strip punctuation AND spaces
+// so "CJ Wilson", "C.J. Wilson", "C. J. Wilson" all → "cjwilson"
+function normalizeExact(s: string): string {
+  return s.toLowerCase().replace(/[^a-z0-9]/g, '');
 }
 
 export function resolveAnswer(
@@ -11,10 +17,10 @@ export function resolveAnswer(
   acceptedIds: string[],
   allPlayers: MLBPlayer[]
 ): { correct: boolean; matchedId: string | null } {
-  const normalInput = normalize(input);
+  const normalInput = normalizeExact(input);
   for (const player of allPlayers) {
     if (
-      normalize(player.name) === normalInput &&
+      normalizeExact(player.name) === normalInput &&
       acceptedIds.includes(player.id)
     ) {
       return { correct: true, matchedId: player.id };
@@ -26,8 +32,9 @@ export function resolveAnswer(
 // Returns players whose names contain the query substring (case-insensitive)
 export function searchPlayers(query: string, allPlayers: MLBPlayer[]): MLBPlayer[] {
   if (query.length < 2) return [];
-  const q = normalize(query);
+  const q = normalizeSearch(query);
+  if (!q) return [];
   return allPlayers
-    .filter(p => normalize(p.name).includes(q))
+    .filter(p => normalizeSearch(p.name).includes(q))
     .slice(0, 8);
 }
