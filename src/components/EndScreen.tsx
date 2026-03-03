@@ -150,15 +150,28 @@ export default function EndScreen({ results, rounds, totalScore, stats, todayKey
         Play Other Modes
       </button>
 
-      {/* Tip jar */}
-      <a
-        href="https://buymeacoffee.com/mlbquickpick"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="w-full py-3 rounded-xl font-bold text-base flex items-center justify-center gap-2 bg-yellow-500 hover:bg-yellow-400 active:scale-95 text-gray-900 transition-all duration-150"
-      >
-        <span>☕</span> Buy Me a Coffee
-      </a>
+      {/* Follow + Tip jar */}
+      <div className="grid grid-cols-2 gap-3">
+        <a
+          href="https://x.com/QuickPick_Game"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="py-3 rounded-xl font-bold text-base flex items-center justify-center gap-2 bg-gray-800 hover:bg-gray-700 active:scale-95 text-white border border-gray-700 transition-all duration-150"
+        >
+          <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622 5.911-5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+          </svg>
+          Follow
+        </a>
+        <a
+          href="https://buymeacoffee.com/mlbquickpick"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="py-3 rounded-xl font-bold text-base flex items-center justify-center gap-2 bg-yellow-500 hover:bg-yellow-400 active:scale-95 text-gray-900 transition-all duration-150"
+        >
+          <span>☕</span> Support
+        </a>
+      </div>
 
       {/* Next puzzle */}
       <div className="text-center text-sm text-gray-600">
