@@ -12,7 +12,7 @@ interface Props {
 export default function FeedbackOverlay({ result, canonicalPlayer, acceptedPlayers, onContinue, isLastRound }: Props) {
   const correct = result.correct;
   const skipped = !result.correct && result.timeMs === 0 && result.answeredName === null;
-  const timedOut = !result.correct && result.timeMs >= 15000;
+  const timedOut = !result.correct && result.timeMs >= 20000;
   const [expanded, setExpanded] = useState(false);
 
   // Sort alphabetically, canonical player pinned first

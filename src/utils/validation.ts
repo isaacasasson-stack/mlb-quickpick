@@ -1,7 +1,9 @@
 import type { MLBPlayer } from '../types';
 
 export function normalize(s: string): string {
-  return s.toLowerCase().replace(/[^a-z0-9 ]/g, '').replace(/\s+/g, ' ').trim();
+  // Strip punctuation (periods, hyphens, apostrophes, etc.) then collapse/remove spaces
+  // so "C. J. Wilson", "CJ Wilson", and "C.J. Wilson" all match each other
+  return s.toLowerCase().replace(/[^a-z0-9 ]/g, '').replace(/\s+/g, '').trim();
 }
 
 export function resolveAnswer(

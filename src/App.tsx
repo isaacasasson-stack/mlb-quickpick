@@ -31,6 +31,7 @@ export default function App() {
   const [showHistory, setShowHistory] = useState(false);
 
   const isTimed = state.difficulty === 'timed';
+  const isSurvival = state.difficulty === 'survival';
   const timerActive = state.phase === 'round_active' && isTimed;
   const { remainingSecs, barRef, getElapsed } = useTimer(timerActive, timerExpired);
 
@@ -102,17 +103,17 @@ export default function App() {
             {isTimed && (
               <TimerBar barRef={barRef} remainingSecs={remainingSecs} />
             )}
-            <ClueCard
-              team={currentRound.clue.team}
-              position={currentRound.clue.position}
-              season={currentRound.clue.season}
-            />
             <PlayerInput
               onSubmit={handleSubmit}
               onSkip={skipRound}
               disabled={phase !== 'round_active'}
               players={players}
-              showSkip={!isTimed}
+              showSkip={!isTimed && !isSurvival}
+            />
+            <ClueCard
+              team={currentRound.clue.team}
+              position={currentRound.clue.position}
+              season={currentRound.clue.season}
             />
           </>
         )}
@@ -126,7 +127,7 @@ export default function App() {
             rounds[lastResult.roundIndex]?.acceptedIds.includes(p.id)
           )}
           onContinue={advanceRound}
-          isLastRound={currentRoundIndex >= rounds.length - 1}
+          isLastRound={!isSurvival && currentRoundIndex >= rounds.length - 1}
         />
       )}
     </div>

@@ -54,6 +54,39 @@ export function generateDailyPuzzle(dateKey: string, allPlayers: MLBPlayer[], mo
   return rounds;
 }
 
+/** Generate one more survival round at a given index, using a seeded RNG offset by index */
+export function generateSurvivalRound(dateKey: string, allPlayers: MLBPlayer[], mode: GameMode, roundIndex: number): PuzzleRound {
+  const { minYear, maxYear, seedOffset } = GAME_MODES[mode];
+  const pool = allPlayers.filter(p =>
+    p.seasons.some(s => s.year >= minYear && s.year <= maxYear)
+  );
+
+  // Use a unique seed per round index so each question is deterministic but different
+  const seed = dateToSeed(dateKey) + seedOffset + 1_000_000 + roundIndex * 7919;
+  const rng = mulberry32(seed);
+
+  const shuffled = [...pool].sort(() => rng() - 0.5);
+  const player = shuffled[0];
+
+  const validSeasons = player.seasons.filter(s => s.year >= minYear && s.year <= maxYear);
+  const seasonRecord = validSeasons[Math.floor(rng() * validSeasons.length)];
+
+  const year = seasonRecord.year;
+  const team = seasonRecord.team;
+  const position = seasonRecord.positions[Math.floor(rng() * seasonRecord.positions.length)];
+
+  const acceptedIds = pool
+    .filter(p => playerMatchesClue(p, team, position, year))
+    .map(p => p.id);
+
+  return {
+    roundIndex,
+    clue: { team, position, season: year },
+    answerId: player.id,
+    acceptedIds,
+  };
+}
+
 export function getCanonicalPlayer(playerId: string, players: MLBPlayer[]): MLBPlayer | undefined {
   return players.find(p => p.id === playerId);
 }

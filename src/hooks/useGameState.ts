@@ -1,6 +1,6 @@
 import { useReducer, useEffect, useCallback, useState } from 'react';
-import { generateDailyPuzzle, getCanonicalPlayer } from '../utils/puzzle';
-import { calculatePoints } from '../utils/scoring';
+import { generateDailyPuzzle, generateSurvivalRound, getCanonicalPlayer } from '../utils/puzzle';
+import { calculatePoints, MAX_TIME_MS } from '../utils/scoring';
 import { resolveAnswer } from '../utils/validation';
 import { getTodayKey } from '../utils/seed';
 import { useLocalStorage } from './useLocalStorage';
@@ -21,7 +21,7 @@ type Action =
   | { type: 'SUBMIT_ANSWER'; input: string; elapsedMs: number; players: MLBPlayer[] }
   | { type: 'SKIP_ROUND' }
   | { type: 'TIMER_EXPIRED' }
-  | { type: 'ADVANCE_ROUND' };
+  | { type: 'ADVANCE_ROUND'; players: MLBPlayer[] };
 
 function buildInitialState(): GameState {
   const todayKey = getTodayKey();
@@ -34,6 +34,7 @@ function buildInitialState(): GameState {
     currentRoundIndex: 0,
     results: [],
     totalScore: 0,
+    survivalStreak: 0,
   };
 }
 
@@ -44,7 +45,11 @@ function gameReducer(state: GameState, action: Action): GameState {
       return { ...state, phase: 'intro' };
 
     case 'START_GAME': {
-      const rounds = generateDailyPuzzle(state.todayKey, action.players, action.mode);
+      const isSurvival = action.difficulty === 'survival';
+      // Survival: generate only the first round up front; more generated on demand
+      const rounds = isSurvival
+        ? [generateSurvivalRound(state.todayKey, action.players, action.mode, 0)]
+        : generateDailyPuzzle(state.todayKey, action.players, action.mode);
       return {
         ...state,
         rounds,
@@ -54,6 +59,7 @@ function gameReducer(state: GameState, action: Action): GameState {
         currentRoundIndex: 0,
         results: [],
         totalScore: 0,
+        survivalStreak: 0,
       };
     }
 
@@ -65,8 +71,8 @@ function gameReducer(state: GameState, action: Action): GameState {
         round.acceptedIds,
         action.players
       );
-      // Relaxed mode: correct = full 1000 pts regardless of speed
-      const elapsedForScore = state.difficulty === 'relaxed' ? 0 : action.elapsedMs;
+      // Relaxed/survival mode: correct = full 1000 pts regardless of speed
+      const elapsedForScore = state.difficulty === 'timed' ? action.elapsedMs : 0;
       const points = correct ? calculatePoints(elapsedForScore) : 0;
       const result: RoundResult = {
         roundIndex: state.currentRoundIndex,
@@ -76,11 +82,25 @@ function gameReducer(state: GameState, action: Action): GameState {
         timeMs: action.elapsedMs,
         points,
       };
+
+      // Survival: wrong answer → game_over immediately (no feedback phase)
+      if (state.difficulty === 'survival' && !correct) {
+        return {
+          ...state,
+          phase: 'game_over',
+          results: [...state.results, result],
+          totalScore: state.totalScore + points,
+        };
+      }
+
       return {
         ...state,
         phase: 'round_feedback',
         results: [...state.results, result],
         totalScore: state.totalScore + points,
+        survivalStreak: state.difficulty === 'survival' && correct
+          ? state.survivalStreak + 1
+          : state.survivalStreak,
       };
     }
 
@@ -108,7 +128,7 @@ function gameReducer(state: GameState, action: Action): GameState {
         answeredId: null,
         answeredName: null,
         correct: false,
-        timeMs: 15000,
+        timeMs: MAX_TIME_MS,
         points: 0,
       };
       return {
@@ -121,6 +141,23 @@ function gameReducer(state: GameState, action: Action): GameState {
     case 'ADVANCE_ROUND': {
       if (state.phase !== 'round_feedback') return state;
       const nextIndex = state.currentRoundIndex + 1;
+
+      if (state.difficulty === 'survival') {
+        // Generate the next survival round on the fly
+        const nextRound = generateSurvivalRound(
+          state.todayKey,
+          action.players,
+          state.mode,
+          nextIndex
+        );
+        return {
+          ...state,
+          phase: 'round_active',
+          currentRoundIndex: nextIndex,
+          rounds: [...state.rounds, nextRound],
+        };
+      }
+
       if (nextIndex >= state.rounds.length) {
         return { ...state, phase: 'game_over' };
       }
@@ -222,8 +259,8 @@ export function useGameState() {
   }, []);
 
   const advanceRound = useCallback(() => {
-    dispatch({ type: 'ADVANCE_ROUND' });
-  }, []);
+    dispatch({ type: 'ADVANCE_ROUND', players });
+  }, [players]);
 
   const goToIntro = useCallback(() => {
     dispatch({ type: 'GO_TO_INTRO' });
