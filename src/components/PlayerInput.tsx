@@ -85,7 +85,7 @@ export default function PlayerInput({ onSubmit, onSkip, disabled, players, showS
       <div className="relative">
         <input
           ref={inputRef}
-          type="search"
+          type="text"
           value={query}
           onChange={handleChange}
           onKeyDown={handleKeyDown}
@@ -93,7 +93,7 @@ export default function PlayerInput({ onSubmit, onSkip, disabled, players, showS
           onBlur={() => setTimeout(() => setIsOpen(false), 300)}
           placeholder="Type a player name..."
           disabled={disabled}
-          autoComplete="off"
+          autoComplete="one-time-code"
           autoCorrect="off"
           autoCapitalize="off"
           spellCheck={false}
