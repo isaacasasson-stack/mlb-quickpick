@@ -32,10 +32,17 @@ export default function AutocompleteDropdown({ suggestions, onSelect, highlightI
               e.preventDefault();
               onSelect(player);
             }}
+            onTouchStart={(e) => {
+              // Record where the touch started so we can detect scrolls
+              (e.currentTarget as HTMLElement).dataset.touchStartY = String(e.touches[0].clientY);
+            }}
             onTouchEnd={(e) => {
-              // Use touchend so scroll gestures don't accidentally select
-              e.preventDefault();
-              onSelect(player);
+              // Only select if the finger didn't move (i.e. it was a tap, not a scroll)
+              const startY = parseFloat((e.currentTarget as HTMLElement).dataset.touchStartY ?? '0');
+              if (Math.abs(e.changedTouches[0].clientY - startY) < 8) {
+                e.preventDefault();
+                onSelect(player);
+              }
             }}
           >
             <span className="font-medium">{player.name}</span>
