@@ -21,12 +21,16 @@ export function buildShareText(
   const correctCount = results.filter(r => r.correct).length;
   const modeLabel = GAME_MODES[mode].label;
   const diffLabel = GAME_DIFFICULTIES[difficulty].label;
+  const isSurvival = difficulty === 'survival';
+
+  const line3 = isSurvival ? grid : `${grid} ${correctCount}/5`;
+  const line4 = isSurvival ? `Streak: ${correctCount}` : `Score: ${totalScore.toLocaleString()}/5,000`;
 
   return [
     `⚾ MLB QuickPick ${dateKey}`,
     `${modeLabel} · ${diffLabel}`,
-    `${grid} ${correctCount}/5`,
-    `Score: ${totalScore.toLocaleString()}/5,000`,
+    line3,
+    line4,
     `Play at: mlbquickpick.app`,
   ].join('\n');
 }
