@@ -112,7 +112,9 @@ export default function EndScreen({ results, rounds, totalScore, stats, todayKey
                 <p className="font-semibold text-sm truncate">
                   {r.correct
                     ? r.answeredName
-                    : canon?.name ?? 'Unknown'}
+                    : r.answeredName
+                      ? <span className="text-red-400 line-through">{r.answeredName}</span>
+                      : canon?.name ?? 'Unknown'}
                 </p>
                 <p className="text-xs text-gray-500">
                   {rounds[i]?.clue.team} · {rounds[i]?.clue.position} · {rounds[i]?.clue.season}
