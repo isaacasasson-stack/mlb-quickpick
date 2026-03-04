@@ -28,6 +28,7 @@ export default function IntroScreen({ onStart, todayKey, playedCombos }: Props) 
           <li className="flex gap-2"><span>⏱️</span><span>Timed: 20s clock, faster = more points</span></li>
           <li className="flex gap-2"><span>😌</span><span>Relaxed: no clock, skip freely, 1,000 pts each</span></li>
           <li className="flex gap-2"><span>❤️</span><span>Survival: one life — streak til you miss</span></li>
+          <li className="flex gap-2"><span>📋</span><span>Positions require <strong className="text-white">5+ games</strong> played at that spot that season</span></li>
         </ul>
       </div>
 
