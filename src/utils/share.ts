@@ -31,7 +31,7 @@ export function buildShareText(
     `${modeLabel} · ${diffLabel}`,
     line3,
     line4,
-    `Play at: mlbquickpick.app`,
+    `Play at: https://mlbquickpick.app`,
   ].join('\n');
 }
 
