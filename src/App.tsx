@@ -128,7 +128,7 @@ export default function App() {
             rounds[lastResult.roundIndex]?.acceptedIds.includes(p.id)
           )}
           onContinue={advanceRound}
-          isLastRound={!isSurvival && currentRoundIndex >= rounds.length - 1}
+          isLastRound={(isSurvival && !lastResult.correct) || (!isSurvival && currentRoundIndex >= rounds.length - 1)}
         />
       )}
     </div>

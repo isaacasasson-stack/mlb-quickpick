@@ -83,16 +83,6 @@ function gameReducer(state: GameState, action: Action): GameState {
         points,
       };
 
-      // Survival: wrong answer → game_over immediately (no feedback phase)
-      if (state.difficulty === 'survival' && !correct) {
-        return {
-          ...state,
-          phase: 'game_over',
-          results: [...state.results, result],
-          totalScore: state.totalScore + points,
-        };
-      }
-
       return {
         ...state,
         phase: 'round_feedback',
@@ -143,6 +133,11 @@ function gameReducer(state: GameState, action: Action): GameState {
       const nextIndex = state.currentRoundIndex + 1;
 
       if (state.difficulty === 'survival') {
+        // If the last result was wrong, the game is over
+        const lastResult = state.results[state.results.length - 1];
+        if (lastResult && !lastResult.correct) {
+          return { ...state, phase: 'game_over' };
+        }
         // Generate the next survival round on the fly
         const nextRound = generateSurvivalRound(
           state.todayKey,
