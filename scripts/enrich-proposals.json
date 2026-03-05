@@ -1,0 +1,4584 @@
+{
+  "proposals": [
+    {
+      "name": "A.J. Puk",
+      "id": "aj-puk",
+      "mlb_id": 640462,
+      "missing_seasons": [
+        {
+          "year": 2022,
+          "team": "ATH",
+          "positions": [
+            "RP"
+          ]
+        },
+        {
+          "year": 2024,
+          "team": "ARI",
+          "positions": [
+            "RP"
+          ]
+        },
+        {
+          "year": 2024,
+          "team": "MIA",
+          "positions": [
+            "RP"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "AJ Smith-Shawver",
+      "id": "aj-smith-shawver",
+      "mlb_id": 700363,
+      "missing_seasons": [
+        {
+          "year": 2024,
+          "team": "ATL",
+          "positions": [
+            "SP"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Aaron Brooks",
+      "id": "aaron-brooks",
+      "mlb_id": 605156,
+      "missing_seasons": [
+        {
+          "year": 2024,
+          "team": "ATH",
+          "positions": [
+            "SP"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Abraham Toro",
+      "id": "abraham-toro",
+      "mlb_id": 647351,
+      "missing_seasons": [
+        {
+          "year": 2023,
+          "team": "MIL",
+          "positions": [
+            "1B",
+            "3B",
+            "DH"
+          ]
+        },
+        {
+          "year": 2024,
+          "team": "ATH",
+          "positions": [
+            "1B",
+            "2B",
+            "3B",
+            "DH",
+            "LF"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Andrew Benintendi",
+      "id": "andrew-benintendi",
+      "mlb_id": 643217,
+      "missing_seasons": [
+        {
+          "year": 2022,
+          "team": "KCR",
+          "positions": [
+            "DH",
+            "LF"
+          ]
+        },
+        {
+          "year": 2022,
+          "team": "NYY",
+          "positions": [
+            "LF"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Andrew Saalfrank",
+      "id": "andrew-saalfrank",
+      "mlb_id": 685314,
+      "missing_seasons": [
+        {
+          "year": 2024,
+          "team": "ARI",
+          "positions": [
+            "RP"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Anthony Banda",
+      "id": "anthony-banda",
+      "mlb_id": 607455,
+      "missing_seasons": [
+        {
+          "year": 2022,
+          "team": "NYY",
+          "positions": [
+            "RP"
+          ]
+        },
+        {
+          "year": 2022,
+          "team": "PIT",
+          "positions": [
+            "RP"
+          ]
+        },
+        {
+          "year": 2022,
+          "team": "TOR",
+          "positions": [
+            "RP"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Aroldis Chapman",
+      "id": "aroldis-chapman",
+      "mlb_id": 547973,
+      "missing_seasons": [
+        {
+          "year": 2023,
+          "team": "KCR",
+          "positions": [
+            "RP"
+          ]
+        },
+        {
+          "year": 2023,
+          "team": "TEX",
+          "positions": [
+            "RP"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Austin Adams",
+      "id": "austin-adams",
+      "mlb_id": 613534,
+      "missing_seasons": [
+        {
+          "year": 2022,
+          "team": "SDP",
+          "positions": [
+            "RP"
+          ]
+        },
+        {
+          "year": 2024,
+          "team": "ATH",
+          "positions": [
+            "RP"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Austin Hays",
+      "id": "austin-hays",
+      "mlb_id": 669720,
+      "missing_seasons": [
+        {
+          "year": 2024,
+          "team": "BAL",
+          "positions": [
+            "DH",
+            "LF",
+            "RF"
+          ]
+        },
+        {
+          "year": 2024,
+          "team": "PHI",
+          "positions": [
+            "LF"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Austin Hedges",
+      "id": "austin-hedges",
+      "mlb_id": 595978,
+      "missing_seasons": [
+        {
+          "year": 2023,
+          "team": "PIT",
+          "positions": [
+            "C"
+          ]
+        },
+        {
+          "year": 2023,
+          "team": "TEX",
+          "positions": [
+            "C",
+            "RP"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Austin Voth",
+      "id": "austin-voth",
+      "mlb_id": 608723,
+      "missing_seasons": [
+        {
+          "year": 2022,
+          "team": "BAL",
+          "positions": [
+            "RP",
+            "SP"
+          ]
+        },
+        {
+          "year": 2022,
+          "team": "WSN",
+          "positions": [
+            "RP"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Austin Warren",
+      "id": "austin-warren",
+      "mlb_id": 681810,
+      "missing_seasons": [
+        {
+          "year": 2023,
+          "team": "LAA",
+          "positions": [
+            "RP"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Austin Wynns",
+      "id": "austin-wynns",
+      "mlb_id": 642851,
+      "missing_seasons": [
+        {
+          "year": 2023,
+          "team": "COL",
+          "positions": [
+            "C"
+          ]
+        },
+        {
+          "year": 2023,
+          "team": "LAD",
+          "positions": [
+            "C"
+          ]
+        },
+        {
+          "year": 2023,
+          "team": "SFG",
+          "positions": [
+            "C"
+          ]
+        },
+        {
+          "year": 2025,
+          "team": "ATH",
+          "positions": [
+            "C"
+          ]
+        },
+        {
+          "year": 2025,
+          "team": "CIN",
+          "positions": [
+            "1B",
+            "C",
+            "DH"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Bailey Falter",
+      "id": "bailey-falter",
+      "mlb_id": 663559,
+      "missing_seasons": [
+        {
+          "year": 2023,
+          "team": "PHI",
+          "positions": [
+            "SP"
+          ]
+        },
+        {
+          "year": 2023,
+          "team": "PIT",
+          "positions": [
+            "SP"
+          ]
+        },
+        {
+          "year": 2025,
+          "team": "KCR",
+          "positions": [
+            "SP"
+          ]
+        },
+        {
+          "year": 2025,
+          "team": "PIT",
+          "positions": [
+            "SP"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Ben Rortvedt",
+      "id": "ben-rortvedt",
+      "mlb_id": 666163,
+      "missing_seasons": [
+        {
+          "year": 2025,
+          "team": "LAD",
+          "positions": [
+            "C"
+          ]
+        },
+        {
+          "year": 2025,
+          "team": "TBR",
+          "positions": [
+            "C"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Bligh Madris",
+      "id": "bligh-madris",
+      "mlb_id": 676632,
+      "missing_seasons": [
+        {
+          "year": 2023,
+          "team": "HOU",
+          "positions": [
+            "1B",
+            "DH",
+            "LF",
+            "RP"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Brad Keller",
+      "id": "brad-keller",
+      "mlb_id": 641745,
+      "missing_seasons": [
+        {
+          "year": 2024,
+          "team": "BOS",
+          "positions": [
+            "RP"
+          ]
+        },
+        {
+          "year": 2024,
+          "team": "CHW",
+          "positions": [
+            "SP"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Brandon Drury",
+      "id": "brandon-drury",
+      "mlb_id": 592273,
+      "missing_seasons": [
+        {
+          "year": 2022,
+          "team": "CIN",
+          "positions": [
+            "1B",
+            "2B",
+            "3B",
+            "DH",
+            "RF",
+            "SS"
+          ]
+        },
+        {
+          "year": 2022,
+          "team": "SDP",
+          "positions": [
+            "1B",
+            "2B",
+            "3B",
+            "DH"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Brent Headrick",
+      "id": "brent-headrick",
+      "mlb_id": 687396,
+      "missing_seasons": [
+        {
+          "year": 2024,
+          "team": "MIN",
+          "positions": [
+            "RP"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Brent Rooker",
+      "id": "brent-rooker",
+      "mlb_id": 667670,
+      "missing_seasons": [
+        {
+          "year": 2022,
+          "team": "KCR",
+          "positions": [
+            "DH",
+            "LF",
+            "RF"
+          ]
+        },
+        {
+          "year": 2022,
+          "team": "SDP",
+          "positions": [
+            "LF"
+          ]
+        },
+        {
+          "year": 2023,
+          "team": "ATH",
+          "positions": [
+            "DH",
+            "LF",
+            "RF"
+          ]
+        },
+        {
+          "year": 2024,
+          "team": "ATH",
+          "positions": [
+            "DH",
+            "LF",
+            "RF"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Brock Burke",
+      "id": "brock-burke",
+      "mlb_id": 656271,
+      "missing_seasons": [
+        {
+          "year": 2024,
+          "team": "LAA",
+          "positions": [
+            "RP"
+          ]
+        },
+        {
+          "year": 2024,
+          "team": "TEX",
+          "positions": [
+            "RP"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Bryan De La Cruz",
+      "id": "bryan-de-la-cruz",
+      "mlb_id": 650559,
+      "missing_seasons": [
+        {
+          "year": 2024,
+          "team": "MIA",
+          "positions": [
+            "DH",
+            "LF",
+            "RF"
+          ]
+        },
+        {
+          "year": 2024,
+          "team": "PIT",
+          "positions": [
+            "LF",
+            "RF"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Bryan Hoeing",
+      "id": "bryan-hoeing",
+      "mlb_id": 663773,
+      "missing_seasons": [
+        {
+          "year": 2024,
+          "team": "MIA",
+          "positions": [
+            "RP"
+          ]
+        },
+        {
+          "year": 2024,
+          "team": "SDP",
+          "positions": [
+            "RP"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Byron Buxton",
+      "id": "byron-buxton",
+      "mlb_id": 621439,
+      "missing_seasons": [
+        {
+          "year": 2023,
+          "team": "MIN",
+          "positions": [
+            "DH"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Carlos Estevez",
+      "id": "carlos-estevez",
+      "mlb_id": 608032,
+      "missing_seasons": [
+        {
+          "year": 2024,
+          "team": "LAA",
+          "positions": [
+            "RP"
+          ]
+        },
+        {
+          "year": 2024,
+          "team": "PHI",
+          "positions": [
+            "RP"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Cavan Biggio",
+      "id": "cavan-biggio",
+      "mlb_id": 624415,
+      "missing_seasons": [
+        {
+          "year": 2024,
+          "team": "ATL",
+          "positions": [
+            "2B"
+          ]
+        },
+        {
+          "year": 2024,
+          "team": "LAD",
+          "positions": [
+            "1B",
+            "2B",
+            "3B",
+            "RF"
+          ]
+        },
+        {
+          "year": 2024,
+          "team": "TOR",
+          "positions": [
+            "1B",
+            "2B",
+            "3B",
+            "DH",
+            "RF"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Chadwick Tromp",
+      "id": "chadwick-tromp",
+      "mlb_id": 644433,
+      "missing_seasons": [
+        {
+          "year": 2022,
+          "team": "ATL",
+          "positions": [
+            "C"
+          ]
+        },
+        {
+          "year": 2025,
+          "team": "ATL",
+          "positions": [
+            "C"
+          ]
+        },
+        {
+          "year": 2025,
+          "team": "BAL",
+          "positions": [
+            "C"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Chase Silseth",
+      "id": "chase-silseth",
+      "mlb_id": 681217,
+      "missing_seasons": [
+        {
+          "year": 2024,
+          "team": "LAA",
+          "positions": [
+            "SP"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Chris Flexen",
+      "id": "chris-flexen",
+      "mlb_id": 623167,
+      "missing_seasons": [
+        {
+          "year": 2023,
+          "team": "COL",
+          "positions": [
+            "SP"
+          ]
+        },
+        {
+          "year": 2023,
+          "team": "SEA",
+          "positions": [
+            "RP"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Chris Martin",
+      "id": "chris-martin",
+      "mlb_id": 455119,
+      "missing_seasons": [
+        {
+          "year": 2022,
+          "team": "CHC",
+          "positions": [
+            "RP"
+          ]
+        },
+        {
+          "year": 2022,
+          "team": "LAD",
+          "positions": [
+            "RP"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Chris Paddack",
+      "id": "chris-paddack",
+      "mlb_id": 663978,
+      "missing_seasons": [
+        {
+          "year": 2023,
+          "team": "MIN",
+          "positions": [
+            "RP"
+          ]
+        },
+        {
+          "year": 2025,
+          "team": "DET",
+          "positions": [
+            "RP",
+            "SP"
+          ]
+        },
+        {
+          "year": 2025,
+          "team": "MIN",
+          "positions": [
+            "SP"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Chris Sale",
+      "id": "chris-sale",
+      "mlb_id": 519242,
+      "missing_seasons": [
+        {
+          "year": 2022,
+          "team": "BOS",
+          "positions": [
+            "SP"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Chuckie Robinson",
+      "id": "chuckie-robinson",
+      "mlb_id": 642020,
+      "missing_seasons": [
+        {
+          "year": 2025,
+          "team": "LAD",
+          "positions": [
+            "C"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Cody Poteet",
+      "id": "cody-poteet",
+      "mlb_id": 547001,
+      "missing_seasons": [
+        {
+          "year": 2025,
+          "team": "BAL",
+          "positions": [
+            "RP"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Cole Ragans",
+      "id": "cole-ragans",
+      "mlb_id": 666142,
+      "missing_seasons": [
+        {
+          "year": 2023,
+          "team": "KCR",
+          "positions": [
+            "SP"
+          ]
+        },
+        {
+          "year": 2023,
+          "team": "TEX",
+          "positions": [
+            "RP"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Cole Tucker",
+      "id": "cole-tucker",
+      "mlb_id": 657061,
+      "missing_seasons": [
+        {
+          "year": 2023,
+          "team": "COL",
+          "positions": [
+            "CF",
+            "DH",
+            "RF"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Colin Selby",
+      "id": "colin-selby",
+      "mlb_id": 681882,
+      "missing_seasons": [
+        {
+          "year": 2024,
+          "team": "BAL",
+          "positions": [
+            "RP"
+          ]
+        },
+        {
+          "year": 2024,
+          "team": "KCR",
+          "positions": [
+            "RP"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Connor Brogdon",
+      "id": "connor-brogdon",
+      "mlb_id": 641401,
+      "missing_seasons": [
+        {
+          "year": 2024,
+          "team": "LAD",
+          "positions": [
+            "RP"
+          ]
+        },
+        {
+          "year": 2024,
+          "team": "PHI",
+          "positions": [
+            "RP"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Curt Casali",
+      "id": "curt-casali",
+      "mlb_id": 592200,
+      "missing_seasons": [
+        {
+          "year": 2022,
+          "team": "SEA",
+          "positions": [
+            "1B",
+            "C"
+          ]
+        },
+        {
+          "year": 2022,
+          "team": "SFG",
+          "positions": [
+            "1B",
+            "C",
+            "DH"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Daniel Hudson",
+      "id": "daniel-hudson",
+      "mlb_id": 543339,
+      "missing_seasons": [
+        {
+          "year": 2023,
+          "team": "LAD",
+          "positions": [
+            "RP"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "David Peralta",
+      "id": "david-peralta",
+      "mlb_id": 444482,
+      "missing_seasons": [
+        {
+          "year": 2022,
+          "team": "ARI",
+          "positions": [
+            "DH",
+            "LF"
+          ]
+        },
+        {
+          "year": 2022,
+          "team": "TBR",
+          "positions": [
+            "DH",
+            "LF"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Daz Cameron",
+      "id": "daz-cameron",
+      "mlb_id": 663662,
+      "missing_seasons": [
+        {
+          "year": 2024,
+          "team": "ATH",
+          "positions": [
+            "CF",
+            "DH",
+            "LF",
+            "RF"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Dennis Santana",
+      "id": "dennis-santana",
+      "mlb_id": 642701,
+      "missing_seasons": [
+        {
+          "year": 2024,
+          "team": "NYY",
+          "positions": [
+            "RP"
+          ]
+        },
+        {
+          "year": 2024,
+          "team": "PIT",
+          "positions": [
+            "RP"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Derek Law",
+      "id": "derek-law",
+      "mlb_id": 571882,
+      "missing_seasons": [
+        {
+          "year": 2022,
+          "team": "CIN",
+          "positions": [
+            "RP"
+          ]
+        },
+        {
+          "year": 2022,
+          "team": "DET",
+          "positions": [
+            "RP"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Dominic Leone",
+      "id": "dominic-leone",
+      "mlb_id": 608678,
+      "missing_seasons": [
+        {
+          "year": 2023,
+          "team": "LAA",
+          "positions": [
+            "RP"
+          ]
+        },
+        {
+          "year": 2023,
+          "team": "NYM",
+          "positions": [
+            "RP"
+          ]
+        },
+        {
+          "year": 2023,
+          "team": "SEA",
+          "positions": [
+            "RP"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Dominic Smith",
+      "id": "dominic-smith",
+      "mlb_id": 642086,
+      "missing_seasons": [
+        {
+          "year": 2024,
+          "team": "BOS",
+          "positions": [
+            "1B",
+            "DH",
+            "RP"
+          ]
+        },
+        {
+          "year": 2024,
+          "team": "CIN",
+          "positions": [
+            "1B",
+            "DH"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Donovan Walton",
+      "id": "donovan-walton",
+      "mlb_id": 622268,
+      "missing_seasons": [
+        {
+          "year": 2022,
+          "team": "SEA",
+          "positions": [
+            "3B"
+          ]
+        },
+        {
+          "year": 2025,
+          "team": "PHI",
+          "positions": [
+            "2B"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Drew Waters",
+      "id": "drew-waters",
+      "mlb_id": 671221,
+      "missing_seasons": [
+        {
+          "year": 2024,
+          "team": "KCR",
+          "positions": [
+            "LF",
+            "RF"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Dylan Dodd",
+      "id": "dylan-dodd",
+      "mlb_id": 689266,
+      "missing_seasons": [
+        {
+          "year": 2024,
+          "team": "ATL",
+          "positions": [
+            "RP"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Easton Lucas",
+      "id": "easton-lucas",
+      "mlb_id": 687922,
+      "missing_seasons": [
+        {
+          "year": 2023,
+          "team": "ATH",
+          "positions": [
+            "RP"
+          ]
+        },
+        {
+          "year": 2024,
+          "team": "ATH",
+          "positions": [
+            "RP"
+          ]
+        },
+        {
+          "year": 2024,
+          "team": "DET",
+          "positions": [
+            "RP"
+          ]
+        },
+        {
+          "year": 2024,
+          "team": "TOR",
+          "positions": [
+            "RP"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Edmundo Sosa",
+      "id": "edmundo-sosa",
+      "mlb_id": 624641,
+      "missing_seasons": [
+        {
+          "year": 2022,
+          "team": "PHI",
+          "positions": [
+            "3B",
+            "DH",
+            "LF",
+            "SS"
+          ]
+        },
+        {
+          "year": 2022,
+          "team": "STL",
+          "positions": [
+            "2B",
+            "3B",
+            "DH",
+            "SS"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Eduard Bazardo",
+      "id": "eduard-bazardo",
+      "mlb_id": 660825,
+      "missing_seasons": [
+        {
+          "year": 2023,
+          "team": "BAL",
+          "positions": [
+            "RP"
+          ]
+        },
+        {
+          "year": 2023,
+          "team": "SEA",
+          "positions": [
+            "RP"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Eduardo Salazar",
+      "id": "eduardo-salazar",
+      "mlb_id": 674285,
+      "missing_seasons": [
+        {
+          "year": 2024,
+          "team": "LAD",
+          "positions": [
+            "RP"
+          ]
+        },
+        {
+          "year": 2024,
+          "team": "WSN",
+          "positions": [
+            "RP"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Edwin Uceta",
+      "id": "edwin-uceta",
+      "mlb_id": 670955,
+      "missing_seasons": [
+        {
+          "year": 2023,
+          "team": "NYM",
+          "positions": [
+            "RP"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Ehire Adrianza",
+      "id": "ehire-adrianza",
+      "mlb_id": 501303,
+      "missing_seasons": [
+        {
+          "year": 2022,
+          "team": "ATL",
+          "positions": [
+            "2B",
+            "3B",
+            "SS"
+          ]
+        },
+        {
+          "year": 2023,
+          "team": "ATL",
+          "positions": [
+            "SS"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Elias Diaz",
+      "id": "elias-diaz",
+      "mlb_id": 553869,
+      "missing_seasons": [
+        {
+          "year": 2024,
+          "team": "COL",
+          "positions": [
+            "C",
+            "DH"
+          ]
+        },
+        {
+          "year": 2024,
+          "team": "SDP",
+          "positions": [
+            "C"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Emmanuel Rivera",
+      "id": "emmanuel-rivera",
+      "mlb_id": 656896,
+      "missing_seasons": [
+        {
+          "year": 2022,
+          "team": "ARI",
+          "positions": [
+            "1B",
+            "3B",
+            "DH"
+          ]
+        },
+        {
+          "year": 2022,
+          "team": "KCR",
+          "positions": [
+            "1B",
+            "3B",
+            "DH"
+          ]
+        },
+        {
+          "year": 2024,
+          "team": "BAL",
+          "positions": [
+            "1B",
+            "3B"
+          ]
+        },
+        {
+          "year": 2024,
+          "team": "MIA",
+          "positions": [
+            "1B",
+            "3B",
+            "DH",
+            "RP"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Freddy Tarnok",
+      "id": "freddy-tarnok",
+      "mlb_id": 676206,
+      "missing_seasons": [
+        {
+          "year": 2022,
+          "team": "ATL",
+          "positions": [
+            "RP"
+          ]
+        },
+        {
+          "year": 2023,
+          "team": "ATH",
+          "positions": [
+            "SP"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Garrett Cleavinger",
+      "id": "garrett-cleavinger",
+      "mlb_id": 664076,
+      "missing_seasons": [
+        {
+          "year": 2022,
+          "team": "LAD",
+          "positions": [
+            "RP"
+          ]
+        },
+        {
+          "year": 2022,
+          "team": "TBR",
+          "positions": [
+            "RP"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Garrett Whitlock",
+      "id": "garrett-whitlock",
+      "mlb_id": 676477,
+      "missing_seasons": [
+        {
+          "year": 2024,
+          "team": "BOS",
+          "positions": [
+            "SP"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Gary Sanchez",
+      "id": "gary-sanchez",
+      "mlb_id": 596142,
+      "missing_seasons": [
+        {
+          "year": 2023,
+          "team": "NYM",
+          "positions": [
+            "C"
+          ]
+        },
+        {
+          "year": 2023,
+          "team": "SDP",
+          "positions": [
+            "C",
+            "DH"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Gavin Hollowell",
+      "id": "gavin-hollowell",
+      "mlb_id": 668970,
+      "missing_seasons": [
+        {
+          "year": 2024,
+          "team": "CHC",
+          "positions": [
+            "RP"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Genesis Cabrera",
+      "id": "genesis-cabrera",
+      "mlb_id": 650893,
+      "missing_seasons": [
+        {
+          "year": 2023,
+          "team": "STL",
+          "positions": [
+            "RP"
+          ]
+        },
+        {
+          "year": 2023,
+          "team": "TOR",
+          "positions": [
+            "RP"
+          ]
+        },
+        {
+          "year": 2025,
+          "team": "CHC",
+          "positions": [
+            "RP"
+          ]
+        },
+        {
+          "year": 2025,
+          "team": "MIN",
+          "positions": [
+            "RP"
+          ]
+        },
+        {
+          "year": 2025,
+          "team": "NYM",
+          "positions": [
+            "RP"
+          ]
+        },
+        {
+          "year": 2025,
+          "team": "PIT",
+          "positions": [
+            "RP"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Giancarlo Stanton",
+      "id": "giancarlo-stanton",
+      "mlb_id": 519317,
+      "missing_seasons": [
+        {
+          "year": 2024,
+          "team": "NYY",
+          "positions": [
+            "DH"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Huascar Brazoban",
+      "id": "huascar-brazoban",
+      "mlb_id": 623211,
+      "missing_seasons": [
+        {
+          "year": 2024,
+          "team": "MIA",
+          "positions": [
+            "RP"
+          ]
+        },
+        {
+          "year": 2024,
+          "team": "NYM",
+          "positions": [
+            "RP"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Hunter Harvey",
+      "id": "hunter-harvey",
+      "mlb_id": 640451,
+      "missing_seasons": [
+        {
+          "year": 2024,
+          "team": "KCR",
+          "positions": [
+            "RP"
+          ]
+        },
+        {
+          "year": 2024,
+          "team": "WSN",
+          "positions": [
+            "RP"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Ian Gibaut",
+      "id": "ian-gibaut",
+      "mlb_id": 664139,
+      "missing_seasons": [
+        {
+          "year": 2022,
+          "team": "CIN",
+          "positions": [
+            "RP"
+          ]
+        },
+        {
+          "year": 2022,
+          "team": "CLE",
+          "positions": [
+            "RP"
+          ]
+        },
+        {
+          "year": 2024,
+          "team": "CIN",
+          "positions": [
+            "RP"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Isiah Kiner-Falefa",
+      "id": "isiah-kiner-falefa",
+      "mlb_id": 643396,
+      "missing_seasons": [
+        {
+          "year": 2024,
+          "team": "PIT",
+          "positions": [
+            "2B",
+            "3B",
+            "SS"
+          ]
+        },
+        {
+          "year": 2024,
+          "team": "TOR",
+          "positions": [
+            "2B",
+            "3B",
+            "CF",
+            "RP",
+            "SS"
+          ]
+        },
+        {
+          "year": 2025,
+          "team": "PIT",
+          "positions": [
+            "3B",
+            "SS"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "J.P. Feyereisen",
+      "id": "jp-feyereisen",
+      "mlb_id": 656420,
+      "missing_seasons": [
+        {
+          "year": 2025,
+          "team": "ARI",
+          "positions": [
+            "RP"
+          ]
+        },
+        {
+          "year": 2025,
+          "team": "LAD",
+          "positions": [
+            "RP"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Jace Peterson",
+      "id": "jace-peterson",
+      "mlb_id": 607054,
+      "missing_seasons": [
+        {
+          "year": 2023,
+          "team": "ARI",
+          "positions": [
+            "1B",
+            "2B",
+            "3B",
+            "DH"
+          ]
+        },
+        {
+          "year": 2023,
+          "team": "ATH",
+          "positions": [
+            "2B",
+            "3B",
+            "DH",
+            "LF",
+            "RP"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Jacob Barnes",
+      "id": "jacob-barnes",
+      "mlb_id": 606930,
+      "missing_seasons": [
+        {
+          "year": 2022,
+          "team": "DET",
+          "positions": [
+            "RP"
+          ]
+        },
+        {
+          "year": 2022,
+          "team": "NYY",
+          "positions": [
+            "RP"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Jacob deGrom",
+      "id": "jacob-degrom",
+      "mlb_id": 594798,
+      "missing_seasons": [
+        {
+          "year": 2024,
+          "team": "TEX",
+          "positions": [
+            "SP"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Jake Woodford",
+      "id": "jake-woodford",
+      "mlb_id": 663765,
+      "missing_seasons": [
+        {
+          "year": 2024,
+          "team": "CHW",
+          "positions": [
+            "SP"
+          ]
+        },
+        {
+          "year": 2024,
+          "team": "PIT",
+          "positions": [
+            "SP"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Jakob Junis",
+      "id": "jakob-junis",
+      "mlb_id": 596001,
+      "missing_seasons": [
+        {
+          "year": 2024,
+          "team": "CIN",
+          "positions": [
+            "RP",
+            "SP"
+          ]
+        },
+        {
+          "year": 2024,
+          "team": "MIL",
+          "positions": [
+            "RP"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Jalen Beeks",
+      "id": "jalen-beeks",
+      "mlb_id": 656222,
+      "missing_seasons": [
+        {
+          "year": 2024,
+          "team": "COL",
+          "positions": [
+            "RP"
+          ]
+        },
+        {
+          "year": 2024,
+          "team": "PIT",
+          "positions": [
+            "RP"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Jared Koenig",
+      "id": "jared-koenig",
+      "mlb_id": 657649,
+      "missing_seasons": [
+        {
+          "year": 2022,
+          "team": "ATH",
+          "positions": [
+            "RP",
+            "SP"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Jason Adam",
+      "id": "jason-adam",
+      "mlb_id": 592094,
+      "missing_seasons": [
+        {
+          "year": 2024,
+          "team": "SDP",
+          "positions": [
+            "RP"
+          ]
+        },
+        {
+          "year": 2024,
+          "team": "TBR",
+          "positions": [
+            "RP"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Jay Jackson",
+      "id": "jay-jackson",
+      "mlb_id": 543351,
+      "missing_seasons": [
+        {
+          "year": 2022,
+          "team": "ATL",
+          "positions": [
+            "RP"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Jeffrey Springs",
+      "id": "jeffrey-springs",
+      "mlb_id": 605488,
+      "missing_seasons": [
+        {
+          "year": 2023,
+          "team": "TBR",
+          "positions": [
+            "SP"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Jesse Chavez",
+      "id": "jesse-chavez",
+      "mlb_id": 445926,
+      "missing_seasons": [
+        {
+          "year": 2022,
+          "team": "ATL",
+          "positions": [
+            "RP"
+          ]
+        },
+        {
+          "year": 2022,
+          "team": "CHC",
+          "positions": [
+            "RP"
+          ]
+        },
+        {
+          "year": 2022,
+          "team": "LAA",
+          "positions": [
+            "RP"
+          ]
+        },
+        {
+          "year": 2025,
+          "team": "ATL",
+          "positions": [
+            "RP"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "JoJo Romero",
+      "id": "jojo-romero",
+      "mlb_id": 668941,
+      "missing_seasons": [
+        {
+          "year": 2022,
+          "team": "PHI",
+          "positions": [
+            "RP"
+          ]
+        },
+        {
+          "year": 2022,
+          "team": "STL",
+          "positions": [
+            "RP"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Joe Kelly",
+      "id": "joe-kelly",
+      "mlb_id": 523260,
+      "missing_seasons": [
+        {
+          "year": 2023,
+          "team": "CHW",
+          "positions": [
+            "RP"
+          ]
+        },
+        {
+          "year": 2023,
+          "team": "LAD",
+          "positions": [
+            "RP"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Joel Payamps",
+      "id": "joel-payamps",
+      "mlb_id": 606303,
+      "missing_seasons": [
+        {
+          "year": 2022,
+          "team": "ATH",
+          "positions": [
+            "RP"
+          ]
+        },
+        {
+          "year": 2022,
+          "team": "KCR",
+          "positions": [
+            "RP"
+          ]
+        },
+        {
+          "year": 2025,
+          "team": "ATL",
+          "positions": [
+            "RP"
+          ]
+        },
+        {
+          "year": 2025,
+          "team": "MIL",
+          "positions": [
+            "RP"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Joey Gallo",
+      "id": "joey-gallo",
+      "mlb_id": 608336,
+      "missing_seasons": [
+        {
+          "year": 2022,
+          "team": "LAD",
+          "positions": [
+            "1B",
+            "DH",
+            "LF",
+            "RF"
+          ]
+        },
+        {
+          "year": 2022,
+          "team": "NYY",
+          "positions": [
+            "CF",
+            "DH",
+            "LF",
+            "RF"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Joey Lucchesi",
+      "id": "joey-lucchesi",
+      "mlb_id": 664192,
+      "missing_seasons": [
+        {
+          "year": 2024,
+          "team": "NYM",
+          "positions": [
+            "SP"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Joey Wiemer",
+      "id": "joey-wiemer",
+      "mlb_id": 686894,
+      "missing_seasons": [
+        {
+          "year": 2024,
+          "team": "CIN",
+          "positions": [
+            "CF",
+            "LF",
+            "RF"
+          ]
+        },
+        {
+          "year": 2024,
+          "team": "MIL",
+          "positions": [
+            "CF",
+            "DH",
+            "LF",
+            "RF"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Johan Oviedo",
+      "id": "johan-oviedo",
+      "mlb_id": 670912,
+      "missing_seasons": [
+        {
+          "year": 2022,
+          "team": "PIT",
+          "positions": [
+            "SP"
+          ]
+        },
+        {
+          "year": 2022,
+          "team": "STL",
+          "positions": [
+            "RP"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "John Curtiss",
+      "id": "john-curtiss",
+      "mlb_id": 595928,
+      "missing_seasons": [
+        {
+          "year": 2024,
+          "team": "COL",
+          "positions": [
+            "RP"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "John King",
+      "id": "john-king",
+      "mlb_id": 667463,
+      "missing_seasons": [
+        {
+          "year": 2023,
+          "team": "STL",
+          "positions": [
+            "RP"
+          ]
+        },
+        {
+          "year": 2023,
+          "team": "TEX",
+          "positions": [
+            "RP"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Jonathan Loaisiga",
+      "id": "jonathan-loaisiga",
+      "mlb_id": 642528,
+      "missing_seasons": [
+        {
+          "year": 2024,
+          "team": "NYY",
+          "positions": [
+            "RP"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Jordan Hicks",
+      "id": "jordan-hicks",
+      "mlb_id": 663855,
+      "missing_seasons": [
+        {
+          "year": 2023,
+          "team": "STL",
+          "positions": [
+            "RP"
+          ]
+        },
+        {
+          "year": 2023,
+          "team": "TOR",
+          "positions": [
+            "RP"
+          ]
+        },
+        {
+          "year": 2025,
+          "team": "BOS",
+          "positions": [
+            "RP"
+          ]
+        },
+        {
+          "year": 2025,
+          "team": "SFG",
+          "positions": [
+            "SP"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Jorge Alcala",
+      "id": "jorge-alcala",
+      "mlb_id": 660896,
+      "missing_seasons": [
+        {
+          "year": 2022,
+          "team": "MIN",
+          "positions": [
+            "RP"
+          ]
+        },
+        {
+          "year": 2025,
+          "team": "BOS",
+          "positions": [
+            "RP"
+          ]
+        },
+        {
+          "year": 2025,
+          "team": "MIN",
+          "positions": [
+            "RP"
+          ]
+        },
+        {
+          "year": 2025,
+          "team": "STL",
+          "positions": [
+            "RP"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Jose Quintana",
+      "id": "jose-quintana",
+      "mlb_id": 500779,
+      "missing_seasons": [
+        {
+          "year": 2022,
+          "team": "PIT",
+          "positions": [
+            "SP"
+          ]
+        },
+        {
+          "year": 2022,
+          "team": "STL",
+          "positions": [
+            "SP"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Jose Siri",
+      "id": "jose-siri",
+      "mlb_id": 642350,
+      "missing_seasons": [
+        {
+          "year": 2022,
+          "team": "HOU",
+          "positions": [
+            "CF",
+            "DH",
+            "LF",
+            "RF"
+          ]
+        },
+        {
+          "year": 2022,
+          "team": "TBR",
+          "positions": [
+            "CF",
+            "DH"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Josh Hader",
+      "id": "josh-hader",
+      "mlb_id": 623352,
+      "missing_seasons": [
+        {
+          "year": 2022,
+          "team": "MIL",
+          "positions": [
+            "RP"
+          ]
+        },
+        {
+          "year": 2022,
+          "team": "SDP",
+          "positions": [
+            "RP"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Josh Rojas",
+      "id": "josh-rojas",
+      "mlb_id": 668942,
+      "missing_seasons": [
+        {
+          "year": 2023,
+          "team": "ARI",
+          "positions": [
+            "2B",
+            "3B",
+            "DH",
+            "LF",
+            "RP"
+          ]
+        },
+        {
+          "year": 2023,
+          "team": "SEA",
+          "positions": [
+            "2B",
+            "3B"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Juan Soto",
+      "id": "juan-soto",
+      "mlb_id": 665742,
+      "missing_seasons": [
+        {
+          "year": 2022,
+          "team": "SDP",
+          "positions": [
+            "RF"
+          ]
+        },
+        {
+          "year": 2022,
+          "team": "WSN",
+          "positions": [
+            "DH",
+            "RF"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Justin Bruihl",
+      "id": "justin-bruihl",
+      "mlb_id": 677865,
+      "missing_seasons": [
+        {
+          "year": 2023,
+          "team": "COL",
+          "positions": [
+            "RP"
+          ]
+        },
+        {
+          "year": 2023,
+          "team": "LAD",
+          "positions": [
+            "RP"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Justin Topa",
+      "id": "justin-topa",
+      "mlb_id": 623437,
+      "missing_seasons": [
+        {
+          "year": 2024,
+          "team": "MIN",
+          "positions": [
+            "RP"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Justin Turner",
+      "id": "justin-turner",
+      "mlb_id": 457759,
+      "missing_seasons": [
+        {
+          "year": 2024,
+          "team": "SEA",
+          "positions": [
+            "1B",
+            "3B",
+            "DH"
+          ]
+        },
+        {
+          "year": 2024,
+          "team": "TOR",
+          "positions": [
+            "1B",
+            "3B",
+            "DH"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Justin Verlander",
+      "id": "justin-verlander",
+      "mlb_id": 434378,
+      "missing_seasons": [
+        {
+          "year": 2023,
+          "team": "HOU",
+          "positions": [
+            "SP"
+          ]
+        },
+        {
+          "year": 2023,
+          "team": "NYM",
+          "positions": [
+            "SP"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Kevin Pillar",
+      "id": "kevin-pillar",
+      "mlb_id": 607680,
+      "missing_seasons": [
+        {
+          "year": 2022,
+          "team": "LAD",
+          "positions": [
+            "CF",
+            "LF"
+          ]
+        },
+        {
+          "year": 2024,
+          "team": "CHW",
+          "positions": [
+            "CF",
+            "DH",
+            "RF"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Kodai Senga",
+      "id": "kodai-senga",
+      "mlb_id": 673540,
+      "missing_seasons": [
+        {
+          "year": 2024,
+          "team": "NYM",
+          "positions": [
+            "SP"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Kolby Allard",
+      "id": "kolby-allard",
+      "mlb_id": 663465,
+      "missing_seasons": [
+        {
+          "year": 2023,
+          "team": "ATL",
+          "positions": [
+            "SP"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Kris Bubic",
+      "id": "kris-bubic",
+      "mlb_id": 663460,
+      "missing_seasons": [
+        {
+          "year": 2023,
+          "team": "KCR",
+          "positions": [
+            "SP"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Kyle Muller",
+      "id": "kyle-muller",
+      "mlb_id": 666205,
+      "missing_seasons": [
+        {
+          "year": 2022,
+          "team": "ATL",
+          "positions": [
+            "SP"
+          ]
+        },
+        {
+          "year": 2023,
+          "team": "ATH",
+          "positions": [
+            "RP",
+            "SP"
+          ]
+        },
+        {
+          "year": 2024,
+          "team": "ATH",
+          "positions": [
+            "RP"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Lance Lynn",
+      "id": "lance-lynn",
+      "mlb_id": 458681,
+      "missing_seasons": [
+        {
+          "year": 2023,
+          "team": "CHW",
+          "positions": [
+            "SP"
+          ]
+        },
+        {
+          "year": 2023,
+          "team": "LAD",
+          "positions": [
+            "SP"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Lane Thomas",
+      "id": "lane-thomas",
+      "mlb_id": 657041,
+      "missing_seasons": [
+        {
+          "year": 2024,
+          "team": "CLE",
+          "positions": [
+            "CF",
+            "DH",
+            "RF"
+          ]
+        },
+        {
+          "year": 2024,
+          "team": "WSN",
+          "positions": [
+            "CF",
+            "DH",
+            "RF"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Liover Peguero",
+      "id": "liover-peguero",
+      "mlb_id": 678894,
+      "missing_seasons": [
+        {
+          "year": 2022,
+          "team": "PIT",
+          "positions": [
+            "SS"
+          ]
+        },
+        {
+          "year": 2024,
+          "team": "PIT",
+          "positions": [
+            "SS"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Livan Soto",
+      "id": "livan-soto",
+      "mlb_id": 670869,
+      "missing_seasons": [
+        {
+          "year": 2023,
+          "team": "LAA",
+          "positions": [
+            "2B",
+            "SS"
+          ]
+        },
+        {
+          "year": 2024,
+          "team": "CIN",
+          "positions": [
+            "DH"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Lucas Erceg",
+      "id": "lucas-erceg",
+      "mlb_id": 668674,
+      "missing_seasons": [
+        {
+          "year": 2023,
+          "team": "ATH",
+          "positions": [
+            "RP"
+          ]
+        },
+        {
+          "year": 2024,
+          "team": "ATH",
+          "positions": [
+            "RP"
+          ]
+        },
+        {
+          "year": 2024,
+          "team": "KCR",
+          "positions": [
+            "RP"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Lucas Sims",
+      "id": "lucas-sims",
+      "mlb_id": 608371,
+      "missing_seasons": [
+        {
+          "year": 2024,
+          "team": "BOS",
+          "positions": [
+            "RP"
+          ]
+        },
+        {
+          "year": 2024,
+          "team": "CIN",
+          "positions": [
+            "RP"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Luis Arraez",
+      "id": "luis-arraez",
+      "mlb_id": 650333,
+      "missing_seasons": [
+        {
+          "year": 2024,
+          "team": "MIA",
+          "positions": [
+            "1B",
+            "2B"
+          ]
+        },
+        {
+          "year": 2024,
+          "team": "SDP",
+          "positions": [
+            "1B",
+            "2B",
+            "DH"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Luis Castillo",
+      "id": "luis-castillo",
+      "mlb_id": 622491,
+      "missing_seasons": [
+        {
+          "year": 2022,
+          "team": "CIN",
+          "positions": [
+            "SP"
+          ]
+        },
+        {
+          "year": 2022,
+          "team": "SEA",
+          "positions": [
+            "SP"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Luis Guillorme",
+      "id": "luis-guillorme",
+      "mlb_id": 641645,
+      "missing_seasons": [
+        {
+          "year": 2024,
+          "team": "ARI",
+          "positions": [
+            "2B",
+            "3B",
+            "DH"
+          ]
+        },
+        {
+          "year": 2024,
+          "team": "ATL",
+          "positions": [
+            "2B",
+            "RP",
+            "SS"
+          ]
+        },
+        {
+          "year": 2024,
+          "team": "LAA",
+          "positions": [
+            "2B",
+            "3B",
+            "DH",
+            "RP",
+            "SS"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Luis Torrens",
+      "id": "luis-torrens",
+      "mlb_id": 620443,
+      "missing_seasons": [
+        {
+          "year": 2023,
+          "team": "CHC",
+          "positions": [
+            "C",
+            "DH",
+            "LF"
+          ]
+        },
+        {
+          "year": 2023,
+          "team": "SEA",
+          "positions": [
+            "C",
+            "DH"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Luis Urias",
+      "id": "luis-urias",
+      "mlb_id": 649966,
+      "missing_seasons": [
+        {
+          "year": 2023,
+          "team": "BOS",
+          "positions": [
+            "2B",
+            "3B"
+          ]
+        },
+        {
+          "year": 2023,
+          "team": "MIL",
+          "positions": [
+            "2B",
+            "3B"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Luke Williams",
+      "id": "luke-williams",
+      "mlb_id": 663897,
+      "missing_seasons": [
+        {
+          "year": 2022,
+          "team": "SFG",
+          "positions": [
+            "3B",
+            "LF"
+          ]
+        },
+        {
+          "year": 2023,
+          "team": "ATL",
+          "positions": [
+            "1B",
+            "3B",
+            "DH",
+            "LF"
+          ]
+        },
+        {
+          "year": 2023,
+          "team": "LAD",
+          "positions": [
+            "RP",
+            "SS"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Mark Leiter Jr.",
+      "id": "mark-leiter-jr",
+      "mlb_id": 643410,
+      "missing_seasons": [
+        {
+          "year": 2024,
+          "team": "CHC",
+          "positions": [
+            "RP"
+          ]
+        },
+        {
+          "year": 2024,
+          "team": "NYY",
+          "positions": [
+            "RP"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Martin Perez",
+      "id": "martin-perez",
+      "mlb_id": 527048,
+      "missing_seasons": [
+        {
+          "year": 2024,
+          "team": "PIT",
+          "positions": [
+            "SP"
+          ]
+        },
+        {
+          "year": 2024,
+          "team": "SDP",
+          "positions": [
+            "SP"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Masataka Yoshida",
+      "id": "masataka-yoshida",
+      "mlb_id": 807799,
+      "missing_seasons": [
+        {
+          "year": 2024,
+          "team": "BOS",
+          "positions": [
+            "DH",
+            "LF"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Matt Festa",
+      "id": "matt-festa",
+      "mlb_id": 670036,
+      "missing_seasons": [
+        {
+          "year": 2024,
+          "team": "NYM",
+          "positions": [
+            "RP"
+          ]
+        },
+        {
+          "year": 2024,
+          "team": "TEX",
+          "positions": [
+            "RP"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Matt Mervis",
+      "id": "matt-mervis",
+      "mlb_id": 670223,
+      "missing_seasons": [
+        {
+          "year": 2024,
+          "team": "CHC",
+          "positions": [
+            "1B",
+            "DH",
+            "RP"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Matt Moore",
+      "id": "matt-moore",
+      "mlb_id": 519043,
+      "missing_seasons": [
+        {
+          "year": 2023,
+          "team": "CLE",
+          "positions": [
+            "RP"
+          ]
+        },
+        {
+          "year": 2023,
+          "team": "LAA",
+          "positions": [
+            "RP"
+          ]
+        },
+        {
+          "year": 2023,
+          "team": "MIA",
+          "positions": [
+            "RP"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Max Scherzer",
+      "id": "max-scherzer",
+      "mlb_id": 453286,
+      "missing_seasons": [
+        {
+          "year": 2023,
+          "team": "NYM",
+          "positions": [
+            "SP"
+          ]
+        },
+        {
+          "year": 2023,
+          "team": "TEX",
+          "positions": [
+            "SP"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Michael Kopech",
+      "id": "michael-kopech",
+      "mlb_id": 656629,
+      "missing_seasons": [
+        {
+          "year": 2024,
+          "team": "CHW",
+          "positions": [
+            "RP"
+          ]
+        },
+        {
+          "year": 2024,
+          "team": "LAD",
+          "positions": [
+            "RP"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Michael Siani",
+      "id": "michael-siani",
+      "mlb_id": 672279,
+      "missing_seasons": [
+        {
+          "year": 2023,
+          "team": "CIN",
+          "positions": [
+            "CF",
+            "LF"
+          ]
+        },
+        {
+          "year": 2023,
+          "team": "STL",
+          "positions": [
+            "CF",
+            "DH"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Michael Tonkin",
+      "id": "michael-tonkin",
+      "mlb_id": 543859,
+      "missing_seasons": [
+        {
+          "year": 2024,
+          "team": "MIN",
+          "positions": [
+            "RP"
+          ]
+        },
+        {
+          "year": 2024,
+          "team": "NYM",
+          "positions": [
+            "RP"
+          ]
+        },
+        {
+          "year": 2024,
+          "team": "NYY",
+          "positions": [
+            "RP"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Miguel Andujar",
+      "id": "miguel-andujar",
+      "mlb_id": 609280,
+      "missing_seasons": [
+        {
+          "year": 2022,
+          "team": "NYY",
+          "positions": [
+            "1B",
+            "DH",
+            "LF"
+          ]
+        },
+        {
+          "year": 2022,
+          "team": "PIT",
+          "positions": [
+            "DH",
+            "LF"
+          ]
+        },
+        {
+          "year": 2024,
+          "team": "ATH",
+          "positions": [
+            "1B",
+            "DH",
+            "LF"
+          ]
+        },
+        {
+          "year": 2025,
+          "team": "CIN",
+          "positions": [
+            "1B",
+            "DH",
+            "LF"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Mike Clevinger",
+      "id": "mike-clevinger",
+      "mlb_id": 605182,
+      "missing_seasons": [
+        {
+          "year": 2024,
+          "team": "CHW",
+          "positions": [
+            "SP"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Nabil Crismatt",
+      "id": "nabil-crismatt",
+      "mlb_id": 622503,
+      "missing_seasons": [
+        {
+          "year": 2023,
+          "team": "ARI",
+          "positions": [
+            "RP"
+          ]
+        },
+        {
+          "year": 2023,
+          "team": "SDP",
+          "positions": [
+            "RP"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Nate Pearson",
+      "id": "nate-pearson",
+      "mlb_id": 663878,
+      "missing_seasons": [
+        {
+          "year": 2024,
+          "team": "CHC",
+          "positions": [
+            "RP"
+          ]
+        },
+        {
+          "year": 2024,
+          "team": "TOR",
+          "positions": [
+            "RP"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Nelson Velazquez",
+      "id": "nelson-velazquez",
+      "mlb_id": 676369,
+      "missing_seasons": [
+        {
+          "year": 2023,
+          "team": "CHC",
+          "positions": [
+            "CF",
+            "DH",
+            "LF",
+            "RF"
+          ]
+        },
+        {
+          "year": 2023,
+          "team": "KCR",
+          "positions": [
+            "DH",
+            "LF",
+            "RF"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Nick Ahmed",
+      "id": "nick-ahmed",
+      "mlb_id": 605113,
+      "missing_seasons": [
+        {
+          "year": 2024,
+          "team": "LAD",
+          "positions": [
+            "SS"
+          ]
+        },
+        {
+          "year": 2024,
+          "team": "SDP",
+          "positions": [
+            "2B",
+            "SS"
+          ]
+        },
+        {
+          "year": 2024,
+          "team": "SFG",
+          "positions": [
+            "SS"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Nick Maton",
+      "id": "nick-maton",
+      "mlb_id": 665155,
+      "missing_seasons": [
+        {
+          "year": 2024,
+          "team": "BAL",
+          "positions": [
+            "2B",
+            "3B",
+            "DH"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Nick Mears",
+      "id": "nick-mears",
+      "mlb_id": 683232,
+      "missing_seasons": [
+        {
+          "year": 2022,
+          "team": "PIT",
+          "positions": [
+            "RP"
+          ]
+        },
+        {
+          "year": 2024,
+          "team": "COL",
+          "positions": [
+            "RP"
+          ]
+        },
+        {
+          "year": 2024,
+          "team": "MIL",
+          "positions": [
+            "RP"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Nicky Lopez",
+      "id": "nicky-lopez",
+      "mlb_id": 670032,
+      "missing_seasons": [
+        {
+          "year": 2023,
+          "team": "ATL",
+          "positions": [
+            "1B",
+            "2B",
+            "3B",
+            "RP",
+            "SS"
+          ]
+        },
+        {
+          "year": 2023,
+          "team": "KCR",
+          "positions": [
+            "1B",
+            "2B",
+            "3B",
+            "DH",
+            "LF",
+            "SS"
+          ]
+        },
+        {
+          "year": 2025,
+          "team": "CHC",
+          "positions": [
+            "2B",
+            "3B",
+            "SS"
+          ]
+        },
+        {
+          "year": 2025,
+          "team": "LAA",
+          "positions": [
+            "3B",
+            "LF",
+            "RP",
+            "SS"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Oswald Peraza",
+      "id": "oswald-peraza",
+      "mlb_id": 672724,
+      "missing_seasons": [
+        {
+          "year": 2024,
+          "team": "NYY",
+          "positions": [
+            "3B"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Pablo Reyes",
+      "id": "pablo-reyes",
+      "mlb_id": 622569,
+      "missing_seasons": [
+        {
+          "year": 2022,
+          "team": "MIL",
+          "positions": [
+            "3B",
+            "RP",
+            "SS"
+          ]
+        },
+        {
+          "year": 2024,
+          "team": "NYM",
+          "positions": [
+            "DH"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Paul Sewald",
+      "id": "paul-sewald",
+      "mlb_id": 623149,
+      "missing_seasons": [
+        {
+          "year": 2023,
+          "team": "ARI",
+          "positions": [
+            "RP"
+          ]
+        },
+        {
+          "year": 2023,
+          "team": "SEA",
+          "positions": [
+            "RP"
+          ]
+        },
+        {
+          "year": 2025,
+          "team": "CLE",
+          "positions": [
+            "RP"
+          ]
+        },
+        {
+          "year": 2025,
+          "team": "DET",
+          "positions": [
+            "RP"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Peter Strzelecki",
+      "id": "peter-strzelecki",
+      "mlb_id": 657265,
+      "missing_seasons": [
+        {
+          "year": 2023,
+          "team": "ARI",
+          "positions": [
+            "RP"
+          ]
+        },
+        {
+          "year": 2023,
+          "team": "MIL",
+          "positions": [
+            "RP"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Phil Bickford",
+      "id": "phil-bickford",
+      "mlb_id": 641360,
+      "missing_seasons": [
+        {
+          "year": 2023,
+          "team": "LAD",
+          "positions": [
+            "RP"
+          ]
+        },
+        {
+          "year": 2023,
+          "team": "NYM",
+          "positions": [
+            "RP"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Pierce Johnson",
+      "id": "pierce-johnson",
+      "mlb_id": 572955,
+      "missing_seasons": [
+        {
+          "year": 2023,
+          "team": "ATL",
+          "positions": [
+            "RP"
+          ]
+        },
+        {
+          "year": 2023,
+          "team": "COL",
+          "positions": [
+            "RP"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Quinn Priester",
+      "id": "quinn-priester",
+      "mlb_id": 682990,
+      "missing_seasons": [
+        {
+          "year": 2024,
+          "team": "BOS",
+          "positions": [
+            "SP"
+          ]
+        },
+        {
+          "year": 2024,
+          "team": "PIT",
+          "positions": [
+            "SP"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Raisel Iglesias",
+      "id": "raisel-iglesias",
+      "mlb_id": 628452,
+      "missing_seasons": [
+        {
+          "year": 2022,
+          "team": "ATL",
+          "positions": [
+            "RP"
+          ]
+        },
+        {
+          "year": 2022,
+          "team": "LAA",
+          "positions": [
+            "RP"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Ramon Laureano",
+      "id": "ramon-laureano",
+      "mlb_id": 657656,
+      "missing_seasons": [
+        {
+          "year": 2022,
+          "team": "ATH",
+          "positions": [
+            "CF",
+            "DH",
+            "RF"
+          ]
+        },
+        {
+          "year": 2023,
+          "team": "ATH",
+          "positions": [
+            "CF",
+            "DH",
+            "RF"
+          ]
+        },
+        {
+          "year": 2023,
+          "team": "CLE",
+          "positions": [
+            "CF",
+            "DH",
+            "RF"
+          ]
+        },
+        {
+          "year": 2024,
+          "team": "CLE",
+          "positions": [
+            "CF",
+            "RF"
+          ]
+        },
+        {
+          "year": 2025,
+          "team": "BAL",
+          "positions": [
+            "CF",
+            "DH",
+            "LF",
+            "RF"
+          ]
+        },
+        {
+          "year": 2025,
+          "team": "SDP",
+          "positions": [
+            "CF",
+            "DH",
+            "LF",
+            "RF"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Randy Arozarena",
+      "id": "randy-arozarena",
+      "mlb_id": 668227,
+      "missing_seasons": [
+        {
+          "year": 2024,
+          "team": "SEA",
+          "positions": [
+            "CF",
+            "DH",
+            "LF"
+          ]
+        },
+        {
+          "year": 2024,
+          "team": "TBR",
+          "positions": [
+            "CF",
+            "DH",
+            "LF"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Reed Garrett",
+      "id": "reed-garrett",
+      "mlb_id": 657585,
+      "missing_seasons": [
+        {
+          "year": 2023,
+          "team": "BAL",
+          "positions": [
+            "RP"
+          ]
+        },
+        {
+          "year": 2023,
+          "team": "NYM",
+          "positions": [
+            "RP"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Reese McGuire",
+      "id": "reese-mcguire",
+      "mlb_id": 624512,
+      "missing_seasons": [
+        {
+          "year": 2022,
+          "team": "BOS",
+          "positions": [
+            "C",
+            "RP"
+          ]
+        },
+        {
+          "year": 2022,
+          "team": "CHW",
+          "positions": [
+            "C",
+            "DH"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Reynaldo Lopez",
+      "id": "reynaldo-lopez",
+      "mlb_id": 625643,
+      "missing_seasons": [
+        {
+          "year": 2023,
+          "team": "CHW",
+          "positions": [
+            "RP"
+          ]
+        },
+        {
+          "year": 2023,
+          "team": "CLE",
+          "positions": [
+            "RP"
+          ]
+        },
+        {
+          "year": 2023,
+          "team": "LAA",
+          "positions": [
+            "RP"
+          ]
+        },
+        {
+          "year": 2025,
+          "team": "ATL",
+          "positions": [
+            "SP"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Robbie Ray",
+      "id": "robbie-ray",
+      "mlb_id": 592662,
+      "missing_seasons": [
+        {
+          "year": 2023,
+          "team": "SEA",
+          "positions": [
+            "SP"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Ryan Borucki",
+      "id": "ryan-borucki",
+      "mlb_id": 621366,
+      "missing_seasons": [
+        {
+          "year": 2022,
+          "team": "SEA",
+          "positions": [
+            "RP"
+          ]
+        },
+        {
+          "year": 2022,
+          "team": "TOR",
+          "positions": [
+            "RP"
+          ]
+        },
+        {
+          "year": 2025,
+          "team": "PIT",
+          "positions": [
+            "RP"
+          ]
+        },
+        {
+          "year": 2025,
+          "team": "TOR",
+          "positions": [
+            "RP"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Ryan Brasier",
+      "id": "ryan-brasier",
+      "mlb_id": 518489,
+      "missing_seasons": [
+        {
+          "year": 2023,
+          "team": "BOS",
+          "positions": [
+            "RP"
+          ]
+        },
+        {
+          "year": 2023,
+          "team": "LAD",
+          "positions": [
+            "RP"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Ryan Burr",
+      "id": "ryan-burr",
+      "mlb_id": 621114,
+      "missing_seasons": [
+        {
+          "year": 2025,
+          "team": "TOR",
+          "positions": [
+            "RP"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Ryan Kreidler",
+      "id": "ryan-kreidler",
+      "mlb_id": 668952,
+      "missing_seasons": [
+        {
+          "year": 2023,
+          "team": "DET",
+          "positions": [
+            "2B",
+            "3B",
+            "SS"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Ryan Thompson",
+      "id": "ryan-thompson",
+      "mlb_id": 657044,
+      "missing_seasons": [
+        {
+          "year": 2023,
+          "team": "ARI",
+          "positions": [
+            "RP"
+          ]
+        },
+        {
+          "year": 2023,
+          "team": "TBR",
+          "positions": [
+            "RP"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Ryne Stanek",
+      "id": "ryne-stanek",
+      "mlb_id": 592773,
+      "missing_seasons": [
+        {
+          "year": 2024,
+          "team": "NYM",
+          "positions": [
+            "RP"
+          ]
+        },
+        {
+          "year": 2024,
+          "team": "SEA",
+          "positions": [
+            "RP"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Sam Huff",
+      "id": "sam-huff",
+      "mlb_id": 669087,
+      "missing_seasons": [
+        {
+          "year": 2024,
+          "team": "TEX",
+          "positions": [
+            "C"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Sam Moll",
+      "id": "sam-moll",
+      "mlb_id": 594580,
+      "missing_seasons": [
+        {
+          "year": 2022,
+          "team": "ATH",
+          "positions": [
+            "RP"
+          ]
+        },
+        {
+          "year": 2023,
+          "team": "ATH",
+          "positions": [
+            "RP"
+          ]
+        },
+        {
+          "year": 2023,
+          "team": "CIN",
+          "positions": [
+            "RP"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Sandy Leon",
+      "id": "sandy-leon",
+      "mlb_id": 506702,
+      "missing_seasons": [
+        {
+          "year": 2022,
+          "team": "CLE",
+          "positions": [
+            "C",
+            "RP"
+          ]
+        },
+        {
+          "year": 2022,
+          "team": "MIN",
+          "positions": [
+            "C"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Scott Barlow",
+      "id": "scott-barlow",
+      "mlb_id": 605130,
+      "missing_seasons": [
+        {
+          "year": 2023,
+          "team": "KCR",
+          "positions": [
+            "RP"
+          ]
+        },
+        {
+          "year": 2023,
+          "team": "SDP",
+          "positions": [
+            "RP"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Sean Newcomb",
+      "id": "sean-newcomb",
+      "mlb_id": 656794,
+      "missing_seasons": [
+        {
+          "year": 2022,
+          "team": "ATL",
+          "positions": [
+            "RP"
+          ]
+        },
+        {
+          "year": 2022,
+          "team": "CHC",
+          "positions": [
+            "RP"
+          ]
+        },
+        {
+          "year": 2023,
+          "team": "ATH",
+          "positions": [
+            "RP"
+          ]
+        },
+        {
+          "year": 2024,
+          "team": "ATH",
+          "positions": [
+            "RP"
+          ]
+        },
+        {
+          "year": 2025,
+          "team": "ATH",
+          "positions": [
+            "RP"
+          ]
+        },
+        {
+          "year": 2025,
+          "team": "BOS",
+          "positions": [
+            "RP",
+            "SP"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Seby Zavala",
+      "id": "seby-zavala",
+      "mlb_id": 664874,
+      "missing_seasons": [
+        {
+          "year": 2023,
+          "team": "ARI",
+          "positions": [
+            "C",
+            "RP"
+          ]
+        },
+        {
+          "year": 2023,
+          "team": "CHW",
+          "positions": [
+            "C"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Shane Bieber",
+      "id": "shane-bieber",
+      "mlb_id": 669456,
+      "missing_seasons": [
+        {
+          "year": 2024,
+          "team": "CLE",
+          "positions": [
+            "SP"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Shawn Armstrong",
+      "id": "shawn-armstrong",
+      "mlb_id": 542888,
+      "missing_seasons": [
+        {
+          "year": 2022,
+          "team": "MIA",
+          "positions": [
+            "RP"
+          ]
+        },
+        {
+          "year": 2022,
+          "team": "TBR",
+          "positions": [
+            "RP"
+          ]
+        },
+        {
+          "year": 2024,
+          "team": "CHC",
+          "positions": [
+            "RP"
+          ]
+        },
+        {
+          "year": 2024,
+          "team": "STL",
+          "positions": [
+            "RP"
+          ]
+        },
+        {
+          "year": 2024,
+          "team": "TBR",
+          "positions": [
+            "RP",
+            "SP"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Shelby Miller",
+      "id": "shelby-miller",
+      "mlb_id": 571946,
+      "missing_seasons": [
+        {
+          "year": 2022,
+          "team": "SFG",
+          "positions": [
+            "RP"
+          ]
+        },
+        {
+          "year": 2025,
+          "team": "ARI",
+          "positions": [
+            "RP"
+          ]
+        },
+        {
+          "year": 2025,
+          "team": "MIL",
+          "positions": [
+            "RP"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Shohei Ohtani",
+      "id": "shohei-ohtani",
+      "mlb_id": 660271,
+      "missing_seasons": [
+        {
+          "year": 2024,
+          "team": "LAD",
+          "positions": [
+            "DH"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Spencer Strider",
+      "id": "spencer-strider",
+      "mlb_id": 675911,
+      "missing_seasons": [
+        {
+          "year": 2024,
+          "team": "ATL",
+          "positions": [
+            "SP"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Spencer Turnbull",
+      "id": "spencer-turnbull",
+      "mlb_id": 605513,
+      "missing_seasons": [
+        {
+          "year": 2025,
+          "team": "TOR",
+          "positions": [
+            "SP"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Stuart Fairchild",
+      "id": "stuart-fairchild",
+      "mlb_id": 656413,
+      "missing_seasons": [
+        {
+          "year": 2022,
+          "team": "CIN",
+          "positions": [
+            "CF",
+            "LF",
+            "RF"
+          ]
+        },
+        {
+          "year": 2022,
+          "team": "SEA",
+          "positions": [
+            "LF"
+          ]
+        },
+        {
+          "year": 2022,
+          "team": "SFG",
+          "positions": [
+            "CF"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "T.J. McFarland",
+      "id": "tj-mcfarland",
+      "mlb_id": 519008,
+      "missing_seasons": [
+        {
+          "year": 2023,
+          "team": "NYM",
+          "positions": [
+            "RP"
+          ]
+        },
+        {
+          "year": 2024,
+          "team": "ATH",
+          "positions": [
+            "RP"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Tanner Banks",
+      "id": "tanner-banks",
+      "mlb_id": 621383,
+      "missing_seasons": [
+        {
+          "year": 2024,
+          "team": "CHW",
+          "positions": [
+            "RP"
+          ]
+        },
+        {
+          "year": 2024,
+          "team": "PHI",
+          "positions": [
+            "RP"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Tanner Rainey",
+      "id": "tanner-rainey",
+      "mlb_id": 663432,
+      "missing_seasons": [
+        {
+          "year": 2023,
+          "team": "WSN",
+          "positions": [
+            "RP"
+          ]
+        },
+        {
+          "year": 2025,
+          "team": "DET",
+          "positions": [
+            "RP"
+          ]
+        },
+        {
+          "year": 2025,
+          "team": "PIT",
+          "positions": [
+            "RP"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Tayler Saucedo",
+      "id": "tayler-saucedo",
+      "mlb_id": 642048,
+      "missing_seasons": [
+        {
+          "year": 2022,
+          "team": "TOR",
+          "positions": [
+            "RP"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Tayler Scott",
+      "id": "tayler-scott",
+      "mlb_id": 605463,
+      "missing_seasons": [
+        {
+          "year": 2023,
+          "team": "ATH",
+          "positions": [
+            "RP"
+          ]
+        },
+        {
+          "year": 2023,
+          "team": "BOS",
+          "positions": [
+            "SP"
+          ]
+        },
+        {
+          "year": 2023,
+          "team": "LAD",
+          "positions": [
+            "RP"
+          ]
+        },
+        {
+          "year": 2025,
+          "team": "ARI",
+          "positions": [
+            "RP"
+          ]
+        },
+        {
+          "year": 2025,
+          "team": "HOU",
+          "positions": [
+            "RP"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Taylor Rogers",
+      "id": "taylor-rogers",
+      "mlb_id": 573124,
+      "missing_seasons": [
+        {
+          "year": 2022,
+          "team": "MIL",
+          "positions": [
+            "RP"
+          ]
+        },
+        {
+          "year": 2022,
+          "team": "SDP",
+          "positions": [
+            "RP"
+          ]
+        },
+        {
+          "year": 2025,
+          "team": "CHC",
+          "positions": [
+            "RP"
+          ]
+        },
+        {
+          "year": 2025,
+          "team": "CIN",
+          "positions": [
+            "RP"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Taylor Trammell",
+      "id": "taylor-trammell",
+      "mlb_id": 666211,
+      "missing_seasons": [
+        {
+          "year": 2024,
+          "team": "LAD",
+          "positions": [
+            "LF",
+            "RF"
+          ]
+        },
+        {
+          "year": 2024,
+          "team": "NYY",
+          "positions": [
+            "LF",
+            "RF"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Tim Hill",
+      "id": "tim-hill",
+      "mlb_id": 657612,
+      "missing_seasons": [
+        {
+          "year": 2024,
+          "team": "CHW",
+          "positions": [
+            "RP"
+          ]
+        },
+        {
+          "year": 2024,
+          "team": "NYY",
+          "positions": [
+            "RP"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Tomas Nido",
+      "id": "tomas-nido",
+      "mlb_id": 621512,
+      "missing_seasons": [
+        {
+          "year": 2024,
+          "team": "CHC",
+          "positions": [
+            "C"
+          ]
+        },
+        {
+          "year": 2024,
+          "team": "NYM",
+          "positions": [
+            "C"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Tommy Pham",
+      "id": "tommy-pham",
+      "mlb_id": 502054,
+      "missing_seasons": [
+        {
+          "year": 2022,
+          "team": "BOS",
+          "positions": [
+            "DH",
+            "LF"
+          ]
+        },
+        {
+          "year": 2022,
+          "team": "CIN",
+          "positions": [
+            "DH",
+            "LF"
+          ]
+        },
+        {
+          "year": 2024,
+          "team": "KCR",
+          "positions": [
+            "DH",
+            "LF",
+            "RF"
+          ]
+        },
+        {
+          "year": 2024,
+          "team": "STL",
+          "positions": [
+            "DH",
+            "LF",
+            "RF"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Tony Santillan",
+      "id": "tony-santillan",
+      "mlb_id": 663574,
+      "missing_seasons": [
+        {
+          "year": 2023,
+          "team": "CIN",
+          "positions": [
+            "RP"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Touki Toussaint",
+      "id": "touki-toussaint",
+      "mlb_id": 657053,
+      "missing_seasons": [
+        {
+          "year": 2023,
+          "team": "CHW",
+          "positions": [
+            "SP"
+          ]
+        },
+        {
+          "year": 2023,
+          "team": "CLE",
+          "positions": [
+            "SP"
+          ]
+        },
+        {
+          "year": 2025,
+          "team": "LAA",
+          "positions": [
+            "RP"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Trent Thornton",
+      "id": "trent-thornton",
+      "mlb_id": 663423,
+      "missing_seasons": [
+        {
+          "year": 2023,
+          "team": "SEA",
+          "positions": [
+            "RP"
+          ]
+        },
+        {
+          "year": 2023,
+          "team": "TOR",
+          "positions": [
+            "RP"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Triston McKenzie",
+      "id": "triston-mckenzie",
+      "mlb_id": 663474,
+      "missing_seasons": [
+        {
+          "year": 2023,
+          "team": "CLE",
+          "positions": [
+            "SP"
+          ]
+        },
+        {
+          "year": 2025,
+          "team": "CLE",
+          "positions": [
+            "RP"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Tyler Duffey",
+      "id": "tyler-duffey",
+      "mlb_id": 608648,
+      "missing_seasons": [
+        {
+          "year": 2023,
+          "team": "CHC",
+          "positions": [
+            "RP"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Tyler Glasnow",
+      "id": "tyler-glasnow",
+      "mlb_id": 607192,
+      "missing_seasons": [
+        {
+          "year": 2022,
+          "team": "TBR",
+          "positions": [
+            "SP"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Tyler Mahle",
+      "id": "tyler-mahle",
+      "mlb_id": 641816,
+      "missing_seasons": [
+        {
+          "year": 2022,
+          "team": "CIN",
+          "positions": [
+            "SP"
+          ]
+        },
+        {
+          "year": 2022,
+          "team": "MIN",
+          "positions": [
+            "SP"
+          ]
+        },
+        {
+          "year": 2024,
+          "team": "TEX",
+          "positions": [
+            "SP"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Walker Buehler",
+      "id": "walker-buehler",
+      "mlb_id": 621111,
+      "missing_seasons": [
+        {
+          "year": 2025,
+          "team": "BOS",
+          "positions": [
+            "SP"
+          ]
+        },
+        {
+          "year": 2025,
+          "team": "PHI",
+          "positions": [
+            "SP"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Wander Suero",
+      "id": "wander-suero",
+      "mlb_id": 593833,
+      "missing_seasons": [
+        {
+          "year": 2024,
+          "team": "HOU",
+          "positions": [
+            "RP"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Yimi Garcia",
+      "id": "yimi-garcia",
+      "mlb_id": 554340,
+      "missing_seasons": [
+        {
+          "year": 2024,
+          "team": "SEA",
+          "positions": [
+            "RP"
+          ]
+        },
+        {
+          "year": 2024,
+          "team": "TOR",
+          "positions": [
+            "RP"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Yusei Kikuchi",
+      "id": "yusei-kikuchi",
+      "mlb_id": 579328,
+      "missing_seasons": [
+        {
+          "year": 2024,
+          "team": "HOU",
+          "positions": [
+            "SP"
+          ]
+        },
+        {
+          "year": 2024,
+          "team": "TOR",
+          "positions": [
+            "SP"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Zach Eflin",
+      "id": "zach-eflin",
+      "mlb_id": 621107,
+      "missing_seasons": [
+        {
+          "year": 2024,
+          "team": "BAL",
+          "positions": [
+            "SP"
+          ]
+        },
+        {
+          "year": 2024,
+          "team": "TBR",
+          "positions": [
+            "SP"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Zach McKinstry",
+      "id": "zach-mckinstry",
+      "mlb_id": 656716,
+      "missing_seasons": [
+        {
+          "year": 2022,
+          "team": "CHC",
+          "positions": [
+            "2B",
+            "3B",
+            "DH",
+            "SS"
+          ]
+        },
+        {
+          "year": 2022,
+          "team": "LAD",
+          "positions": [
+            "2B",
+            "3B",
+            "DH",
+            "LF",
+            "RF",
+            "SS"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Zach Pop",
+      "id": "zach-pop",
+      "mlb_id": 647315,
+      "missing_seasons": [
+        {
+          "year": 2022,
+          "team": "MIA",
+          "positions": [
+            "RP"
+          ]
+        },
+        {
+          "year": 2022,
+          "team": "TOR",
+          "positions": [
+            "RP"
+          ]
+        },
+        {
+          "year": 2025,
+          "team": "NYM",
+          "positions": [
+            "RP"
+          ]
+        },
+        {
+          "year": 2025,
+          "team": "SEA",
+          "positions": [
+            "RP"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Zack Littell",
+      "id": "zack-littell",
+      "mlb_id": 641793,
+      "missing_seasons": [
+        {
+          "year": 2023,
+          "team": "BOS",
+          "positions": [
+            "RP"
+          ]
+        },
+        {
+          "year": 2023,
+          "team": "TBR",
+          "positions": [
+            "RP",
+            "SP"
+          ]
+        },
+        {
+          "year": 2025,
+          "team": "CIN",
+          "positions": [
+            "SP"
+          ]
+        },
+        {
+          "year": 2025,
+          "team": "TBR",
+          "positions": [
+            "SP"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Zack Short",
+      "id": "zack-short",
+      "mlb_id": 670097,
+      "missing_seasons": [
+        {
+          "year": 2022,
+          "team": "DET",
+          "positions": [
+            "2B",
+            "DH",
+            "SS"
+          ]
+        },
+        {
+          "year": 2024,
+          "team": "ATL",
+          "positions": [
+            "2B",
+            "3B",
+            "SS"
+          ]
+        },
+        {
+          "year": 2024,
+          "team": "BOS",
+          "positions": [
+            "2B",
+            "3B"
+          ]
+        },
+        {
+          "year": 2024,
+          "team": "NYM",
+          "positions": [
+            "2B",
+            "3B",
+            "DH",
+            "SS"
+          ]
+        }
+      ]
+    }
+  ],
+  "not_found": []
+}
