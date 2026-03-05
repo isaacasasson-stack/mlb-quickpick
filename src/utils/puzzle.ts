@@ -3,6 +3,14 @@ import { GAME_MODES } from '../types';
 import { mulberry32, dateToSeed } from './seed';
 
 const ROUNDS_PER_DAY = 5;
+const MAX_RP_ROUNDS = 1; // at most 1 RP clue per game
+
+/** Pick a position, deprioritising RP when non-RP options exist */
+function pickPosition(positions: string[], rng: () => number): string {
+  const nonRP = positions.filter(p => p !== 'RP');
+  const pool = nonRP.length > 0 ? nonRP : positions;
+  return pool[Math.floor(rng() * pool.length)];
+}
 
 /** A player matches a clue only if the SAME season record has all three: year, team, position */
 function playerMatchesClue(player: MLBPlayer, team: string, position: string, year: number): boolean {
@@ -26,6 +34,7 @@ export function generateDailyPuzzle(dateKey: string, allPlayers: MLBPlayer[], mo
   const shuffled = [...pool].sort(() => rng() - 0.5);
 
   const rounds: PuzzleRound[] = [];
+  let rpCount = 0;
 
   for (let i = 0; i < ROUNDS_PER_DAY; i++) {
     const player = shuffled[i];
@@ -36,7 +45,22 @@ export function generateDailyPuzzle(dateKey: string, allPlayers: MLBPlayer[], mo
 
     const year = seasonRecord.year;
     const team = seasonRecord.team;
-    const position = seasonRecord.positions[Math.floor(rng() * seasonRecord.positions.length)];
+
+    // Deprioritise RP; if cap already hit, force a non-RP season if possible
+    let position: string;
+    if (rpCount >= MAX_RP_ROUNDS) {
+      const nonRPSeasons = validSeasons.filter(s => s.positions.some(p => p !== 'RP'));
+      if (nonRPSeasons.length > 0) {
+        const altSeason = nonRPSeasons[Math.floor(rng() * nonRPSeasons.length)];
+        const nonRPPositions = altSeason.positions.filter(p => p !== 'RP');
+        position = nonRPPositions[Math.floor(rng() * nonRPPositions.length)];
+      } else {
+        position = pickPosition(seasonRecord.positions, rng);
+      }
+    } else {
+      position = pickPosition(seasonRecord.positions, rng);
+    }
+    if (position === 'RP') rpCount++;
 
     // All players matching ALL 3 clues against the same season record
     const acceptedIds = pool
@@ -79,7 +103,7 @@ export function generateSurvivalRound(dateKey: string, allPlayers: MLBPlayer[], 
 
   const year = seasonRecord.year;
   const team = seasonRecord.team;
-  const position = seasonRecord.positions[Math.floor(rng() * seasonRecord.positions.length)];
+  const position = pickPosition(seasonRecord.positions, rng);
 
   const acceptedIds = pool
     .filter(p => playerMatchesClue(p, team, position, year))
