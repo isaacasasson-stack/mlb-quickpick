@@ -110,6 +110,7 @@ export default function App() {
               disabled={phase !== 'round_active'}
               players={players}
               showSkip={!isTimed && !isSurvival}
+              clueYear={currentRound.clue.season}
             />
             <ClueCard
               team={currentRound.clue.team}

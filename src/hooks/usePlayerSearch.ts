@@ -2,11 +2,11 @@ import { useState, useMemo } from 'react';
 import { searchPlayers } from '../utils/validation';
 import type { MLBPlayer } from '../types';
 
-export function usePlayerSearch(allPlayers: MLBPlayer[]) {
+export function usePlayerSearch(allPlayers: MLBPlayer[], clueYear?: number) {
   const [query, setQuery] = useState('');
   const [selectedPlayer, setSelectedPlayer] = useState<MLBPlayer | null>(null);
 
-  const suggestions = useMemo(() => searchPlayers(query, allPlayers), [query, allPlayers]);
+  const suggestions = useMemo(() => searchPlayers(query, allPlayers, clueYear), [query, allPlayers, clueYear]);
 
   const selectPlayer = (player: MLBPlayer) => {
     setSelectedPlayer(player);

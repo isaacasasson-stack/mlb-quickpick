@@ -9,11 +9,12 @@ interface Props {
   disabled: boolean;
   players: MLBPlayer[];
   showSkip: boolean;
+  clueYear?: number;
 }
 
-export default function PlayerInput({ onSubmit, onSkip, disabled, players, showSkip }: Props) {
+export default function PlayerInput({ onSubmit, onSkip, disabled, players, showSkip, clueYear }: Props) {
   const { query, setQuery, suggestions, selectedPlayer, selectPlayer, reset, clearSelection } =
-    usePlayerSearch(players);
+    usePlayerSearch(players, clueYear);
   const [highlightIndex, setHighlightIndex] = useState(0);
   const [isOpen, setIsOpen] = useState(false);
   const inputRef = useRef<HTMLInputElement>(null);

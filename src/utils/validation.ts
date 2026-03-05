@@ -50,9 +50,11 @@ function careerLength(p: MLBPlayer): number {
   return new Set(p.seasons.map(s => s.year)).size;
 }
 
-// Returns players matching the query, sorted by relevance then career length.
-// Exact substring matches come first; fuzzy (1-2 char typo) matches follow.
-export function searchPlayers(query: string, allPlayers: MLBPlayer[]): MLBPlayer[] {
+// Returns players matching the query, sorted by:
+//   1. Active in clueYear (if provided) — most relevant to the current question
+//   2. Career length descending — more recognisable players surface first
+// Exact substring matches always precede fuzzy (1-2 char typo) matches.
+export function searchPlayers(query: string, allPlayers: MLBPlayer[], clueYear?: number): MLBPlayer[] {
   if (query.length < 2) return [];
   const q = normalizeSearch(query);
   if (!q) return [];
@@ -68,7 +70,6 @@ export function searchPlayers(query: string, allPlayers: MLBPlayer[]): MLBPlayer
     if (name.includes(q)) {
       exact.push(p);
     } else {
-      // Check each word in the name against each word in the query for close matches
       const nameWords = name.split(' ');
       const queryWords = q.split(' ');
       const isFuzzy = queryWords.every(qw =>
@@ -82,10 +83,17 @@ export function searchPlayers(query: string, allPlayers: MLBPlayer[]): MLBPlayer
     }
   }
 
-  // Sort each group by career length descending (more seasons = more recognisable)
-  const byCareer = (a: MLBPlayer, b: MLBPlayer) => careerLength(b) - careerLength(a);
-  exact.sort(byCareer);
-  fuzzy.sort(byCareer);
+  const activeInYear = (p: MLBPlayer) =>
+    clueYear !== undefined && p.seasons.some(s => s.year === clueYear) ? 1 : 0;
+
+  const byRelevance = (a: MLBPlayer, b: MLBPlayer) => {
+    const yearDiff = activeInYear(b) - activeInYear(a);
+    if (yearDiff !== 0) return yearDiff;
+    return careerLength(b) - careerLength(a);
+  };
+
+  exact.sort(byRelevance);
+  fuzzy.sort(byRelevance);
 
   return [...exact, ...fuzzy].slice(0, 8);
 }
