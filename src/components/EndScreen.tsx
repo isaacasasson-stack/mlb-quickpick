@@ -49,6 +49,25 @@ export default function EndScreen({ results, rounds, totalScore, stats, todayKey
   const pct = maxScore > 0 ? Math.round((totalScore / maxScore) * 100) : 0;
   const difficultyIcon = difficulty === 'timed' ? '⏱️' : difficulty === 'relaxed' ? '😌' : '❤️';
 
+  // Estimated percentile based on a realistic timed-mode score distribution.
+  // Breakpoints derived from expected scoring curve: most players score 1000–3000.
+  function estimatePercentile(score: number): number {
+    const breakpoints: [number, number][] = [
+      [0, 1], [500, 5], [1000, 12], [1500, 25], [2000, 42],
+      [2500, 58], [3000, 72], [3500, 83], [4000, 91], [4500, 96], [5000, 99],
+    ];
+    for (let i = breakpoints.length - 1; i >= 0; i--) {
+      if (score >= breakpoints[i][0]) {
+        if (i === breakpoints.length - 1) return breakpoints[i][1];
+        const [s0, p0] = breakpoints[i];
+        const [s1, p1] = breakpoints[i + 1];
+        return Math.round(p0 + (p1 - p0) * ((score - s0) / (s1 - s0)));
+      }
+    }
+    return 1;
+  }
+  const scorePercentile = estimatePercentile(totalScore);
+
   return (
     <div className="flex flex-col gap-6 w-full animate-scale-in">
       {/* Score hero */}
@@ -66,6 +85,7 @@ export default function EndScreen({ results, rounds, totalScore, stats, todayKey
             <p className="text-sm text-gray-500 uppercase tracking-widest mb-1">Final Score</p>
             <p className="text-5xl font-black text-yellow-400">{totalScore.toLocaleString()}</p>
             <p className="text-gray-500 text-sm mt-1">out of 5,000 · {pct}%</p>
+            <p className="text-blue-400 text-sm mt-1 font-semibold">Better than ~{scorePercentile}% of players</p>
           </>
         )}
 
