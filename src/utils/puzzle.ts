@@ -3,7 +3,7 @@ import { GAME_MODES } from '../types';
 import { mulberry32, dateToSeed } from './seed';
 
 const ROUNDS_PER_DAY = 5;
-const MAX_RP_ROUNDS = 1; // at most 1 RP clue per game
+const MAX_RP_ROUNDS = 0; // avoid RP clues entirely unless no non-RP option exists
 
 /** Pick a position, deprioritising RP when non-RP options exist */
 function pickPosition(positions: string[], rng: () => number): string {

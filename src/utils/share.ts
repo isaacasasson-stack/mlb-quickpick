@@ -15,7 +15,8 @@ export function buildShareText(
   dateKey: string,
   totalScore: number,
   mode: GameMode,
-  difficulty: GameDifficulty = 'timed'
+  difficulty: GameDifficulty = 'timed',
+  percentile?: number
 ): string {
   const grid = results.map(r => EMOJI[getSpeedTier(r.correct, r.timeMs)]).join('');
   const correctCount = results.filter(r => r.correct).length;
@@ -24,7 +25,9 @@ export function buildShareText(
   const isSurvival = difficulty === 'survival';
 
   const line3 = isSurvival ? grid : `${grid} ${correctCount}/5`;
-  const line4 = isSurvival ? `Streak: ${correctCount}` : `Score: ${totalScore.toLocaleString()}/5,000`;
+  const line4 = isSurvival
+    ? `Streak: ${correctCount}`
+    : `Score: ${totalScore.toLocaleString()}/5,000${percentile !== undefined ? ` (top ${100 - percentile}%)` : ''}`;
 
   return [
     `⚾ MLB QuickPick ${dateKey}`,

@@ -24,7 +24,6 @@ interface Props {
 
 export default function EndScreen({ results, rounds, totalScore, stats, todayKey, players, mode, difficulty, onPlayOtherModes }: Props) {
   const [countdown, setCountdown] = useState('');
-  const shareText = buildShareText(results, todayKey, totalScore, mode, difficulty);
   const isSurvival = difficulty === 'survival';
   const survivalStreak = results.filter(r => r.correct).length;
 
@@ -67,6 +66,7 @@ export default function EndScreen({ results, rounds, totalScore, stats, todayKey
     return 1;
   }
   const scorePercentile = estimatePercentile(totalScore);
+  const shareText = buildShareText(results, todayKey, totalScore, mode, difficulty, isSurvival ? undefined : scorePercentile);
 
   return (
     <div className="flex flex-col gap-6 w-full animate-scale-in">
