@@ -143,7 +143,8 @@ function gameReducer(state: GameState, action: Action): GameState {
           state.todayKey,
           action.players,
           state.mode,
-          nextIndex
+          nextIndex,
+          state.rounds
         );
         return {
           ...state,

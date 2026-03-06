@@ -3,7 +3,10 @@ import { GAME_MODES } from '../types';
 import { mulberry32, dateToSeed } from './seed';
 
 const ROUNDS_PER_DAY = 5;
-const MAX_RP_ROUNDS = 0; // avoid RP clues entirely unless no non-RP option exists
+const MAX_RP_ROUNDS = 1; // at most 1 RP clue per 5-round daily game
+// Survival: no more than 1 RP clue in any 4-round window
+const SURVIVAL_RP_WINDOW = 4;
+const SURVIVAL_RP_MAX = 1;
 
 /** Pick a position, deprioritising RP when non-RP options exist */
 function pickPosition(positions: string[], rng: () => number): string {
@@ -79,11 +82,22 @@ export function generateDailyPuzzle(dateKey: string, allPlayers: MLBPlayer[], mo
 }
 
 /** Generate one more survival round at a given index, using a seeded RNG offset by index */
-export function generateSurvivalRound(dateKey: string, allPlayers: MLBPlayer[], mode: GameMode, roundIndex: number): PuzzleRound {
+export function generateSurvivalRound(
+  dateKey: string,
+  allPlayers: MLBPlayer[],
+  mode: GameMode,
+  roundIndex: number,
+  recentRounds: PuzzleRound[] = []
+): PuzzleRound {
   const { minYear, maxYear, seedOffset } = GAME_MODES[mode];
   const pool = allPlayers.filter(p =>
     p.seasons.some(s => s.year >= minYear && s.year <= maxYear)
   );
+
+  // Count RP clues in the last SURVIVAL_RP_WINDOW rounds
+  const windowRounds = recentRounds.slice(-SURVIVAL_RP_WINDOW);
+  const recentRpCount = windowRounds.filter(r => r.clue.position === 'RP').length;
+  const suppressRP = recentRpCount >= SURVIVAL_RP_MAX;
 
   // Use a unique seed per round index so each question is deterministic but different
   const seed = dateToSeed(dateKey) + seedOffset + 1_000_000 + roundIndex * 7919;
@@ -91,10 +105,17 @@ export function generateSurvivalRound(dateKey: string, allPlayers: MLBPlayer[], 
 
   const shuffled = [...pool].sort(() => rng() - 0.5);
 
-  // Skip players whose in-range seasons all have empty team/position data
-  const player = shuffled.find(p =>
-    p.seasons.some(s => s.year >= minYear && s.year <= maxYear && s.team && s.positions.length > 0)
-  ) ?? shuffled[0];
+  // If RP is suppressed, prefer players who have at least one non-RP season in range
+  const hasNonRP = (p: MLBPlayer) =>
+    p.seasons.some(s => s.year >= minYear && s.year <= maxYear && s.team && s.positions.some(pos => pos !== 'RP'));
+
+  const player =
+    (suppressRP
+      ? shuffled.find(p => hasNonRP(p))
+      : shuffled.find(p =>
+          p.seasons.some(s => s.year >= minYear && s.year <= maxYear && s.team && s.positions.length > 0)
+        )
+    ) ?? shuffled[0];
 
   const validSeasons = player.seasons.filter(s =>
     s.year >= minYear && s.year <= maxYear && s.team && s.positions.length > 0
